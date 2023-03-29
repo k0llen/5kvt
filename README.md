@@ -1,2 +1,2 @@
-﻿# DePo landing page (gulp)
+﻿# 5kvt online store
 
