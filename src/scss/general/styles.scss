@@ -24,18 +24,14 @@ html {
 
 html,
 body {
-	font-family: "TT Firs Neue", sans-serif;
-	color: #141516;
+    font-family: "Lato", sans-serif;
+	color: #383838;
 	background-color: #fff;
 	margin: 0;
 	padding: 0;
 }
 body {
 	overflow-x: hidden;
-}
-body.lock {
-	overflow: hidden;
-	height: 100vh;
 }
 
 ul,
@@ -78,7 +74,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-	cursor: url(img/cursor-rect.svg) 25 25, auto;
+	cursor: pointer;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
@@ -146,6 +142,12 @@ input {
 			appearance: none;
 		}
 	}
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 select {
