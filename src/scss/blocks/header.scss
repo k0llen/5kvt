@@ -187,6 +187,7 @@
         &--visible {
             .header__catalog-hidden-list {
                 display: block;
+                box-shadow: 0 0 0 2000px rgba(0,0,0, 0.3);
             }
         }
 
