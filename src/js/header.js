@@ -131,7 +131,73 @@ if (document.querySelector('.header__catalog')) {
                 }
             })
         })
-    };
+    } else {
+        const body = document.querySelector('.body');
+        const catalogBurger = document.querySelector('.header__top_burger-catalog');
+        const catalogBurgerTrigger = document.querySelector('.header__top_burger-catalog-trigger');
+        const catalogBurgerMoreTrigger = document.querySelectorAll('.header__catalog_burger-hidden-item-title');
+        const catalogBurgerMoreBack = document.querySelectorAll('.header__catalog_burger-hidden-item-back');
+        const catalogBurgerClose = document.querySelector('.header_burger-catalog-close')
+        const catalogBurgerMore = document.querySelectorAll('.header__catalog_burger-hidden-item');
+        const catalogBurgerMoreItem = document.querySelectorAll('.header__catalog_burger-hidden-item-more');
+
+
+        // burger opening
+
+        catalogBurgerTrigger.addEventListener('click', function (e) {
+            catalogBurger.classList.add('catalog_burger--active');
+            body.classList.add('body-noscroll');
+        });
+
+        // burger close 
+
+        catalogBurgerClose.addEventListener('click', function (e) {
+            catalogBurger.classList.remove('catalog_burger--active');
+            body.classList.remove('body-noscroll');
+            catalogBurgerMore.forEach((item) => {
+                item.classList.remove('catalog_burger-more--active');
+            })
+            catalogBurgerMoreItem.forEach((item) => {
+                item.classList.remove('catalog_burger-2lvl--active');
+            })
+        });
+
+        // catalog more opening
+
+        catalogBurgerMoreTrigger.forEach((child) => {
+            child.addEventListener('click', function (e) {
+                child.parentNode.classList.add('catalog_burger-more--active');
+            })
+
+            catalogBurgerMoreBack.forEach((btn) => {
+                btn.addEventListener('click', function (e) {
+                    child.parentNode.classList.remove('catalog_burger-more--active');
+                    catalogBurgerMoreItem.forEach((item) => {
+                        item.classList.remove('catalog_burger-2lvl--active');
+                    })
+                });
+
+            })
+        });
+
+        //catalog 2lvl accordeon
+
+        const catalog2lvlTrigger = document.querySelectorAll('.header__catalog_burger-hidden-item-more-title');
+
+        catalog2lvlTrigger.forEach((item) => {
+            item.addEventListener('click', function () {
+                if (item.parentNode.classList.contains('catalog_burger-2lvl--active')) {
+                    item.parentNode.classList.remove('catalog_burger-2lvl--active');
+                } else {
+                    catalog2lvlTrigger.forEach((child) => {
+                        child.parentNode.classList.remove('catalog_burger-2lvl--active');
+                    })
+                    item.parentNode.classList.add('catalog_burger-2lvl--active');
+                };
+            });
+        });
+
+    }
 
 
     // Catalog more 2lvl accordeon 

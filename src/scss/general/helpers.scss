@@ -1,6 +1,10 @@
-body {}
+body {
+    overflow-x: hidden;
+}
 
-.body-noscroll {}
+.body-noscroll {
+    overflow-y: hidden;
+}
 
 .wrapper {
     max-width: 1170px;
