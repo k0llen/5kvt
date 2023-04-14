@@ -1,7 +1,7 @@
 
 // Categories swiper
 
-if (document.querySelector('.header__categories-swiper').style.display !== 'none') {
+if (document.querySelector('.header__top').style.display !== 'none') {
     const swiper = new Swiper('.header__categories-swiper', {
         navigation: {
             nextEl: '.header__categories-swiper-button-next',
@@ -148,6 +148,7 @@ if (document.querySelector('.header__catalog')) {
             catalogBurger.classList.add('catalog_burger--active');
             body.classList.add('body-noscroll');
         });
+        
 
         // burger close 
 

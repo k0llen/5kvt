@@ -1,0 +1,100 @@
+.intro {
+    padding-top: 20px;
+    &__swiper{
+        &-wrapper{
+            position: relative;
+        }
+
+        &-slide {
+            position: relative;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        &-slide_1 {
+            .intro__swiper-text {
+                max-width: 320px;
+                p {
+                    max-width: 282px;
+                    margin-top: 20px;
+                    
+                }
+            }
+        }
+        
+        &-slide_2 {
+            .intro__swiper-text {
+                max-width: 424px;
+                p {
+                    max-width: 357px;
+                    margin-top: 20px;
+                    
+                }
+            }
+        }
+
+        &-slide_3 {
+            .intro__swiper-text {
+                max-width: 473px;
+                h1 {
+                    color: #FFFFFF;
+                }
+                p {
+                    max-width: 282px;
+                    margin-top: 15px;
+                    
+                }
+            }
+        }
+
+        &-text {
+            position: absolute;
+            top: 77px;
+            left: 98px;
+            h1 {
+                font-weight: 900;
+                font-size: 64px;
+                line-height: 77px;
+            }
+
+            p {
+                color: #9c9c9c;
+            }
+        }
+
+        &-pic {
+
+        }
+    }
+
+    .intro__swiper-button {
+        &s {
+            position: absolute;
+            left: 98px;
+            bottom: 77px;
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        &-prev, &-next {
+            padding: 15px;
+            background: #1074EB;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        &-next {
+            margin-left: -10px;
+        }
+
+    }
+
+    &__button-more {
+        color: #FFFFFF;
+        padding: 18px 50px;
+        background: #1074EB;
+        border-radius: 3px;
+    }
+}
