@@ -62,33 +62,33 @@
             }
         }
 
+        &-button {
+            &s {
+                position: absolute;
+                left: 98px;
+                bottom: 77px;
+                z-index: 10;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+            &-prev, &-next {
+                padding: 15px;
+                background: #1074EB;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        }
+    
+
         &-pic {
+            &_desctop{
 
+            }
+            &_mobile {
+                display: none;
+            }
         }
-    }
-
-    .intro__swiper-button {
-        &s {
-            position: absolute;
-            left: 98px;
-            bottom: 77px;
-            z-index: 10;
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-        }
-
-        &-prev, &-next {
-            padding: 15px;
-            background: #1074EB;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        &-next {
-            margin-left: -10px;
-        }
-
     }
 
     &__button-more {
@@ -96,5 +96,155 @@
         padding: 18px 50px;
         background: #1074EB;
         border-radius: 3px;
+    }
+}
+@media screen and (min-width: 1101px) {
+    .intro {
+        &__swiper {
+            &-button {
+                &s {
+                    position: absolute;
+                    left: 98px;
+                    bottom: 77px;
+                    z-index: 10;
+                }
+        
+                &-next {
+                    margin-left: -10px;
+                }
+        
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .intro {
+        &__swiper {
+            &-buttons {
+                bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .intro {
+        &__swiper {
+            &-buttons {
+
+            }
+            &-text {
+                top: 50px;
+                h1 {
+                    font-size: 56px;
+                    line-height: 64px;
+                }
+            }
+            &-slide_3 {
+                .intro__swiper-text {
+                    p {
+                        font-size: 30px;
+                        line-height: 36px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .intro {
+        .wrapper {
+            padding: 0 8px;
+        }
+        &__swiper {
+            &-button {
+                &s {
+                    margin-top: 16px;
+                    position: static;
+                    width: 100%;
+                }
+
+                &-prev, &-next {
+                    display: block;
+                    width: 51px;
+                    height: 51px;
+                    min-width: 51px;
+                }
+            }
+            &-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                top: 32px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0 auto;
+                text-align: center;
+                h1 {
+                    font-size: 48px;
+                    line-height: 58px;
+                }
+                p {
+                    margin-top: 24px;
+                }
+            }
+            &-slide_1{
+                .intro__swiper-text{
+                    h1 {
+                        max-width: 240px;
+                    }
+                    p {
+                        max-width: 282px;
+                    }
+                }
+                
+            }
+            &-slide_2{
+                .intro__swiper-text{
+                    h1 {
+                        max-width: 318px;
+                    }
+                    p {
+                        max-width: 342px;
+                    }
+                }
+            }
+            &-slide_3 {
+                .intro__swiper-text {
+                    h1{
+                        max-width: 341px;
+                    }
+                    p {
+                        font-size: 32px;
+                        line-height: 38px;
+                        margin-top: 20px;
+                        max-width: 243px;
+                    }
+                }
+            }
+
+            &-pic {
+                &_desctop{
+                    display: none;
+                }
+                &_mobile {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+        }
+
+        &__button-more {
+            text-align: center;
+            color: #FFFFFF;
+            padding: 16px;
+            width: 100%;
+            max-width: 185px;
+        }
     }
 }

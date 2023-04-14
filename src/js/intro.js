@@ -8,5 +8,16 @@ if (document.querySelector('.intro')) {
         speed: 400,
         slidesPerView: 1,
         slidesToScroll: 1,
+        
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                centeredSlides: true,
+            },
+            // when window width is >= 640px
+            801: {
+                centeredSlides: false,
+            }
+        }
     })
 }
