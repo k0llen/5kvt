@@ -1,0 +1,146 @@
+.promo {
+    padding-top: 100px;
+    &__card {
+        position: relative;
+    
+        &-pic {
+            &s {
+
+            }
+            &_desctop {
+
+            }
+            &_mobile {
+                display: none;
+            }
+        }
+
+        &-text {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 329px;
+            margin-left: -9px;
+            p {
+                color: #FFFFFF;
+                margin-bottom: 58px;
+            }
+        }
+
+        &-link-catalog {
+            display: inline-block;
+            color: #1074EB;
+            padding: 18px 62px;
+            background: #FFFFFF;
+            border-radius: 3px;
+            transition: .3s all;
+            &:hover {
+                background: #dcdcdce9;
+            }
+            &:active {
+                background: #c8c8c8;
+            }
+        }
+    
+    
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .promo {
+        &__card {
+            &-text {
+                top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .promo {
+        &__card {
+            &-text {
+                max-width: 271px;
+                p {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 877px) {
+    .promo {
+        padding-top: 56px;
+        &__card {    
+            &-text {
+                p {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 877px) {
+    .promo {
+        &__card {    
+            &-text {
+                top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .promo {
+
+        .wrapper {
+            padding: 0 8px;
+        }
+
+        &__card {
+            &-pic {
+                &s {
+                    margin-right: -31%;
+                }
+                &_desctop {
+                    display: none;
+                }
+                &_mobile {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            &-text {
+                top: calc(50% - 45px);
+                left: 21px;
+                transform: translate(0);
+                margin-left: 0;
+                max-width: 271px;
+                p {
+                    margin-bottom: 79px;
+                }
+            }
+            &-link-catalog {
+                padding: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .promo {
+
+        &__card {
+            &-text {
+                p {
+                    margin-bottom: 56px;
+                }
+            }
+        }
+    }
+}
