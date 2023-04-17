@@ -27,6 +27,10 @@ body {
         font-size: 18px;
         line-height: 22px;
     }
+    &24{
+        font-size: 24px;
+        line-height: 29px;
+    }
 
     &36 {
         font-size: 36px;
@@ -59,4 +63,25 @@ body {
     font-weight: 400;
     font-size: 36px;
     line-height: 43px;
+}
+
+.new {
+    background: #FF9900;
+    padding: 2px 14px;
+}
+
+.sell {
+    padding: 2px 16px;
+    background: #E92626;
+}
+
+.new, .sell {
+    font-size: 16px;
+    line-height: 19px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    border-radius: 0px 3px 3px 0px;
+    color: #FFFFFF;
+    font-weight: 500;
 }

@@ -36,7 +36,7 @@
         &-slide_3 {
             .intro__swiper-text {
                 max-width: 473px;
-                h1 {
+                .h1 {
                     color: #FFFFFF;
                 }
                 p {
@@ -51,7 +51,7 @@
             position: absolute;
             top: 77px;
             left: 98px;
-            h1 {
+            .h1 {
                 font-weight: 900;
                 font-size: 64px;
                 line-height: 77px;
@@ -77,6 +77,14 @@
                 background: #1074EB;
                 border-radius: 3px;
                 cursor: pointer;
+                transition: .3s all;
+                                &:hover {
+                    background: #0561ce;
+                }
+        
+                &:active {
+                    background: #0653ae;
+                }
             }
         }
     
@@ -96,6 +104,14 @@
         padding: 18px 50px;
         background: #1074EB;
         border-radius: 3px;
+        transition: .3s all;
+                        &:hover {
+                    background: #0561ce;
+                }
+        
+                &:active {
+                    background: #0653ae;
+                }
     }
 }
 @media screen and (min-width: 1101px) {
@@ -136,7 +152,7 @@
             }
             &-text {
                 top: 50px;
-                h1 {
+                .h1 {
                     font-size: 56px;
                     line-height: 64px;
                 }
@@ -184,7 +200,7 @@
                 transform: translateX(-50%);
                 margin: 0 auto;
                 text-align: center;
-                h1 {
+                .h1 {
                     font-size: 48px;
                     line-height: 58px;
                 }
@@ -194,7 +210,7 @@
             }
             &-slide_1{
                 .intro__swiper-text{
-                    h1 {
+                    .h1 {
                         max-width: 240px;
                     }
                     p {
@@ -205,7 +221,7 @@
             }
             &-slide_2{
                 .intro__swiper-text{
-                    h1 {
+                    .h1 {
                         max-width: 318px;
                     }
                     p {
@@ -215,7 +231,7 @@
             }
             &-slide_3 {
                 .intro__swiper-text {
-                    h1{
+                    .h1{
                         max-width: 341px;
                     }
                     p {
