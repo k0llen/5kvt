@@ -9,7 +9,7 @@ if (document.querySelector('.intro')) {
         slidesPerView: 1,
         slidesToScroll: 1,
         
-        breakpoints: {
+/*         breakpoints: {
             // when window width is >= 320px
             320: {
                 centeredSlides: true,
@@ -18,6 +18,6 @@ if (document.querySelector('.intro')) {
             801: {
                 centeredSlides: false,
             }
-        }
+        } */
     })
 }
