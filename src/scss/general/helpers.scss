@@ -13,6 +13,11 @@ body {
 }
 
 .fz {
+    &12{
+        font-size: 12px;
+        line-height: 14px;
+    }
+
     &14 {
         font-size: 14px;
         line-height: 17px;
