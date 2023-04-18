@@ -1,0 +1,122 @@
+.benefits {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    &__title {
+        margin-bottom: 70px;
+        &_mobile{
+            display: none;
+        }
+    }
+    &__swiper {
+
+        &-pagination {
+            display: none;
+        }
+
+        &-wrapper {
+        }
+
+        &-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 3px;
+            background: #f7f7f7;
+            padding: 30px 17px;
+            &-pic {
+                width: 100%;
+                object-fit: cover;
+                &-block {
+                    margin-bottom: 30px;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+
+            p {
+                max-width: 228px;
+            }
+
+            p:last-child {
+                color: #9c9c9c;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .benefits {
+        padding-top: 56px;
+        margin-bottom: 56px;
+
+        .wrapper {
+            padding: 0 8px;
+        }
+
+        &__title {
+            margin: 0;
+            display: none;
+            &_mobile{
+                display: block;
+                text-align: center;
+                    margin-bottom: 36px;
+                    font-size: 36px;
+                    line-height: 43px;
+            }
+        }
+        &__swiper {
+    
+            &-pagination{
+                position: relative;
+                left: 50% !important;
+                top: auto !important;
+                bottom: auto !important;
+                width: fit-content !important;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            &-wrapper {
+                margin-bottom: 16px;
+            }
+    
+            &-slide {
+                padding: 24px 17px;
+                &-pic {
+                    &-block {
+                        margin-bottom: 24px;
+                        width: 72px;
+                        height: 72px;
+                    }
+                }
+                p:last-child {
+                    margin-top: 16px;
+                }
+            }
+        }
+
+        .swiper-pagination-bullet{
+            display: block;
+            width: 14px;
+            height: 14px;
+            background: #1074EB;
+            opacity: .3;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .3s all;
+        }
+        
+        .swiper-pagination-bullet-active{
+           opacity: 1;
+        }
+    }
+}
