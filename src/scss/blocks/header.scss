@@ -508,7 +508,7 @@
                     height: 100%;
                     transition: .3s all;
                     transform: translateX(200%);
-                    overflow: auto;
+                    overflow: hidden;
                     padding-top: 56px;
                     padding-left: 16px;
                     padding-right: 16px;
@@ -591,7 +591,6 @@
                     z-index: 11;
                     background: #1074EB;
                     transition: .3s all;
-                    transform: translateX(100%);
                     display: none;
                     transition: .3s all;
 
@@ -630,13 +629,11 @@
         }
 
         .catalog_burger--active .header__top_burger-catalog-hidden {
-            display: block;
             transform: translateX(0);
         }
 
         .catalog_burger-more--active &__catalog_burger-hidden-items-more {
             display: block;
-            transform: translateX(0);
         }
 
         .catalog_burger-2lvl--active &__catalog_burger-hidden-item-more_2lvl {
