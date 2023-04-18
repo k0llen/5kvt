@@ -509,6 +509,7 @@
                     transition: .3s all;
                     transform: translateX(200%);
                     overflow: hidden;
+                    visibility: hidden;
                     padding-top: 56px;
                     padding-left: 16px;
                     padding-right: 16px;
@@ -593,7 +594,6 @@
                     transition: .3s all;
                     display: none;
                     transition: .3s all;
-
                 }
 
                 &-more {
@@ -630,6 +630,8 @@
 
         .catalog_burger--active .header__top_burger-catalog-hidden {
             transform: translateX(0);
+            overflow: auto;
+            visibility: visible;
         }
 
         .catalog_burger-more--active &__catalog_burger-hidden-items-more {
