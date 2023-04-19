@@ -511,7 +511,7 @@
                     max-height: 0;
                     overflow: hidden;
                     z-index: 10;
-
+                    transform: translateX(100%);
                     &-top {
                         display: flex;
                         align-items: center;
@@ -630,6 +630,7 @@
             padding-top: 56px;
             padding-left: 16px;
             padding-right: 16px;
+            transform: translateX(0);
         }
 
         .catalog_burger-more--active &__catalog_burger-hidden-items-more {
