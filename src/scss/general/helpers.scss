@@ -1,4 +1,8 @@
-body {
+.body {
+    overflow-x: hidden;
+}
+
+.body-noscroll {
     overflow: hidden;
 }
 
