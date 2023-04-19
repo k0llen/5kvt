@@ -506,12 +506,14 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    transition: .3s all;
+                    padding-top: 56px;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    transition: .4s all;
                     background: #1074EB;
-                    max-height: 0;
-                    overflow: hidden;
+                    overflow: auto;
                     z-index: 10;
-                    transform: translateX(100%);
+                    transform: translateY(-100%);
                     &-top {
                         display: flex;
                         align-items: center;
@@ -625,12 +627,7 @@
         }
 
         .catalog_burger--active .header__top_burger-catalog-hidden {
-            max-height: none;
-            overflow: auto;
-            padding-top: 56px;
-            padding-left: 16px;
-            padding-right: 16px;
-            transform: translateX(0);
+            transform: translateY(0);
         }
 
         .catalog_burger-more--active &__catalog_burger-hidden-items-more {
