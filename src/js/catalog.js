@@ -78,4 +78,22 @@ if (document.querySelector('.catalog')) {
         });
     });
 
+    // sidebar filters burger
+
+    if (window.innerWidth <= 1000) {
+        const sideBarOpening = document.querySelector('.catalog__side-burger-open');
+        const catalogWrapper = document.querySelector('.catalog__wrapper');
+        const sidebar = document.querySelector('.catalog__side');
+
+        sideBarOpening.addEventListener('click', function () {
+            catalogWrapper.classList.toggle('sidebar--active');    
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!sidebar.contains(e.target) && !sideBarOpening.contains(e.target)){
+                catalogWrapper.classList.remove('sidebar--active');
+            };
+        });
+    };
+
 }
