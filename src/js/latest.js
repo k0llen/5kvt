@@ -25,4 +25,21 @@ if (document.querySelector('.latest')) {
             }
         },
     })
+
+    // favorite 
+
+    const addFavorite = document.querySelectorAll('.latest__swiper-slide-favorite_blue');
+    const removeFavorite = document.querySelectorAll('.latest__swiper-slide-favorite_red');
+    
+    addFavorite.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            this.parentNode.classList.add('latest__swiper-slide-favorite--active');
+        });
+    });
+
+    removeFavorite.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            this.parentNode.classList.remove('latest__swiper-slide-favorite--active');
+        });
+    });
 }

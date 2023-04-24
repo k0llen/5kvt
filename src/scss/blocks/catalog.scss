@@ -152,7 +152,7 @@
             }
 
             &-title {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
 
 
@@ -285,10 +285,6 @@
             &-min {}
 
             &-max {}
-
-            .catalog__side-block-title {
-                margin-bottom: 10px;
-            }
 
         }
 
@@ -435,15 +431,31 @@
             object-fit: cover;
         }
 
-        &-desc {
-            margin-top: 20px;
-            margin-bottom: 32px;
-            height: 73px;
-            overflow: hidden;
+        &-link {
+            display: block;
+            transition: .3s all;
 
-            p:first-child {
-                color: #c9c9c9;
-                margin-bottom: 7px;
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &-text {
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 32px;
+                height: 73px;
+                overflow: hidden;
+                color: #383838;
+                transition: .3s all;
+    
+                p:first-child {
+                    color: #c9c9c9;
+                    margin-bottom: 7px;
+                }
+    
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
 
@@ -517,12 +529,36 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            cursor: pointer;
-            transition: .3s all;
 
-            &:hover {
+            &_blue {
+
+            }
+
+            &_red {
+                transform: scale(0);
+                z-index: -1;
+            }
+
+            &_blue, &_red {
+                position: absolute;
+                cursor: pointer;
+                transition: .3s all;
+            }
+
+            &_blue:hover, &_red:hover {
                 transform: scale(1.1);
             }
+
+            &--active &_blue {
+                z-index: -1;
+                transform: scale(0);
+            }
+
+            &--active &_red {
+                z-index: 1;
+                transform: scale(1);
+            }
+
         }
     }
 
@@ -572,6 +608,16 @@
 
 }
 
+@media screen and (min-height: 900px) and (min-width: 1024px) {
+    .catalog{
+        &__side {
+            position: sticky;
+            top: 15px;
+            left: 0;
+        }
+    }
+}
+
 @media screen and (max-width: 1050px) {
     .catalog {
         &__wrapper {
@@ -588,15 +634,20 @@
     .catalog {
         &__side {
             position: absolute;
-            top: -40px;
-            right: -16px;
+            top: 0;
+            left: 0;
             z-index: 5;
-            transition: .3s all;
-            transform: translateX(100%);
+            transition: .3s all, 0s box-shadow;
+            transform: translateX(-100%);
+            height: 100%;
         
             &-burger-open {
                 display: block;
             }
+        }
+
+        &__wrapper {
+            position: static;
         }
 
         &__filters {
@@ -606,6 +657,8 @@
         }
         .sidebar--active .catalog__side {
             transform: translateX(0);
+            overflow-y: auto;
+            box-shadow: 0 0 0 1000px rgba(0,0,0,.6);
         }
     }
 }
@@ -628,10 +681,6 @@
             flex-direction: column;
             gap: 32px;
             align-items: flex-start;
-        }
-
-        &__side {
-            top: -20px;
         }
 
         &__filters {

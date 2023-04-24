@@ -84,16 +84,36 @@ if (document.querySelector('.catalog')) {
         const sideBarOpening = document.querySelector('.catalog__side-burger-open');
         const catalogWrapper = document.querySelector('.catalog__wrapper');
         const sidebar = document.querySelector('.catalog__side');
+        const body = document.querySelector('.body');
 
         sideBarOpening.addEventListener('click', function () {
-            catalogWrapper.classList.toggle('sidebar--active');    
+            catalogWrapper.classList.toggle('sidebar--active'); 
+            body.classList.add('body-noscroll');    
         });
 
         document.addEventListener('click', function (e) {
             if (!sidebar.contains(e.target) && !sideBarOpening.contains(e.target)){
                 catalogWrapper.classList.remove('sidebar--active');
+                body.classList.remove('body-noscroll'); 
             };
         });
     };
+
+    // catalog favorite 
+
+    const addFavorite = document.querySelectorAll('.catalog__card-favorite_blue');
+    const removeFavorite = document.querySelectorAll('.catalog__card-favorite_red');
+    
+    addFavorite.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            this.parentNode.classList.add('catalog__card-favorite--active');
+        });
+    });
+
+    removeFavorite.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            this.parentNode.classList.remove('catalog__card-favorite--active');
+        });
+    });
 
 }

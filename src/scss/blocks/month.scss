@@ -37,68 +37,85 @@
             }
         }
 
-        &-slide {
+        &-slide{
             position: relative;
-
+    
             &-pic {
                 width: 100%;
                 object-fit: cover;
             }
-
-            &-desc {
-                margin-top: 20px;
-                margin-bottom: 32px;
-                height: 73px;
-                overflow: hidden;
-
-                p:first-child {
-                    color: #c9c9c9;
-                    margin-bottom: 7px;
+    
+            &-link {
+                display: block;
+                transition: .3s all;
+    
+                &:hover {
+                    transform: scale(1.05);
+                }
+    
+                &-text {
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 32px;
+                    height: 73px;
+                    overflow: hidden;
+                    color: #383838;
+                    transition: .3s all;
+        
+                    p:first-child {
+                        color: #c9c9c9;
+                        margin-bottom: 7px;
+                    }
+        
+                    &:hover {
+                        opacity: .7;
+                    }
                 }
             }
-
+    
             &-cost {
                 margin-bottom: 30px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-
+    
                 &-text {
                     display: flex;
                     align-items: center;
                     gap: 20px;
                 }
-
+    
                 &-recent {
                     text-decoration: line-through;
                     color: #c9c9c9;
                 }
             }
-
+    
             &-parametres {
                 cursor: pointer;
                 transition: .3s all;
-
+    
                 &:hover {
                     transform: scale(1.1);
                 }
-
+    
                 &_mobile {
                     padding: 14px;
                     border-radius: 3px;
                     background: #1074EB;
                     display: none;
-
+                    transition: .3s all;
+    
                     &:hover {
                         background: #0561ce;
                     }
-
+    
                     &:active {
                         background: #0653ae;
                     }
                 }
             }
-
+    
             &-cart {
                 display: flex;
                 align-items: center;
@@ -112,28 +129,51 @@
                 background: #1074EB;
                 cursor: pointer;
                 transition: .3s all;
-
+    
                 &:hover {
                     background: #0561ce;
                 }
-
+    
                 &:active {
                     background: #0653ae;
                 }
             }
-
+    
             &-favorite {
                 position: absolute;
                 top: 15px;
                 right: 15px;
-                cursor: pointer;
-                transition: .3s all;
-
-                &:hover {
+    
+                &_blue {
+    
+                }
+    
+                &_red {
+                    transform: scale(0);
+                    z-index: -1;
+                }
+    
+                &_blue, &_red {
+                    position: absolute;
+                    cursor: pointer;
+                    transition: .3s all;
+                }
+    
+                &_blue:hover, &_red:hover {
                     transform: scale(1.1);
                 }
+    
+                &--active &_blue {
+                    z-index: -1;
+                    transform: scale(0);
+                }
+    
+                &--active &_red {
+                    z-index: 1;
+                    transform: scale(1);
+                }
+    
             }
-
         }
     }
 
