@@ -311,20 +311,42 @@
         &-rate {
             &-star {
                 cursor: pointer;
-
                 svg {
                     fill: #c9c9c9;
                     transition: .3s all;
-
-                    &:hover {
-                        fill: #FFC700;
-                    }
                 }
 
                 &s {
                     display: flex;
+                    flex-direction: row-reverse;
                     align-items: center;
                     gap: 24px;
+
+                    & input[type="radio"] {
+                        display: none;
+                    }
+                }
+
+                &_disabled {
+                    cursor: default; 
+                }
+
+                &:not(.catalog__side-rate-star_disabled):hover {
+                    svg {
+                        fill: #FFC700;
+                    }
+                }   
+
+                &:not(.catalog__side-rate-star_disabled):hover ~ & {
+                    svg {
+                        fill: #FFC700;
+                    }
+                }
+
+                &s input[type="radio"]:checked ~ & {
+                    svg {
+                        fill: #FFC700;
+                    }
                 }
             }
         }
