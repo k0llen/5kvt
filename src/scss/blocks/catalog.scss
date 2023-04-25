@@ -452,31 +452,38 @@
             width: 100%;
             object-fit: cover;
         }
+        
+        &-desc {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 32px;
+            height: 73px;
+            overflow: hidden;
+            color: #383838;
+        }
 
         &-link {
             display: block;
             transition: .3s all;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                transition: .3s all;
+            }
 
             &:hover {
-                transform: scale(1.05);
+                img {
+                    transform: scale(1.05);
+                }
             }
 
             &-text {
-                display: block;
-                margin-top: 20px;
-                margin-bottom: 32px;
-                height: 73px;
-                overflow: hidden;
-                color: #383838;
+                color: #9c9c9c;
                 transition: .3s all;
-    
-                p:first-child {
-                    color: #c9c9c9;
-                    margin-bottom: 7px;
-                }
-    
                 &:hover {
-                    opacity: .7;
+                    color: #383838;
                 }
             }
         }
