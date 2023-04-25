@@ -78,6 +78,7 @@
                 &-text {
                     color: #9c9c9c;
                     transition: .3s all;
+                    margin-bottom: 7px;
                     &:hover {
                         color: #383838;
                     }
@@ -217,14 +218,8 @@
                     margin-bottom: 24px;
                     height: 61px;
                     overflow: hidden;
-                    p {
-                        font-size: 16px;
-                        line-height: 19px;
-                    }
-                    p:first-child {
-                        color: #c9c9c9;
-                        margin-bottom: 4px;
-                    }
+                    font-size: 16px;
+                    line-height: 19px;
                 }
 
                 &-parametres {
@@ -240,6 +235,10 @@
                             height: 23px;
                         }
                     }
+                }
+
+                &-link-text {
+                    margin-bottom: 4px;
                 }
 
                 &-cart {
