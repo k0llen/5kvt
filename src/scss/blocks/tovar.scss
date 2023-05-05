@@ -682,7 +682,6 @@
             &-review {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
                 gap: 16px;
 
                 .fz18 {
@@ -714,6 +713,11 @@
 
 @media screen and (max-width: 590px) {
     .tovar {
+        &__back-links.fz16 {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
         &__char {
             padding: 24px 16px;
 
