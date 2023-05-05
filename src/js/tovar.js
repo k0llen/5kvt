@@ -15,9 +15,11 @@ if (document.querySelector('.tovar')) {
         })
     }
 
-    // Favorite desctop
 
-    if (window.innerWidth >= 1000) {
+    if (window.innerWidth >= 834) {
+
+         // Favorite desctop
+
         const addFavorite = document.querySelectorAll('.tovar__card-text-block-favorite_blue');
         const removeFavorite = document.querySelectorAll('.tovar__card-text-block-favorite_red');
     
@@ -34,6 +36,9 @@ if (document.querySelector('.tovar')) {
         });
 
     } else {
+
+         // Favorite mobile
+
         const burgerFavorite = document.querySelector('.tovar__card-text-block_cart-favorite_burger');
     
         burgerFavorite.addEventListener('click', function () {
