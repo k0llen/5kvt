@@ -15,23 +15,31 @@ if (document.querySelector('.tovar')) {
         })
     }
 
-    // Favorite 
+    // Favorite desctop
 
-    const addFavorite = document.querySelectorAll('.tovar__card-text-block-favorite_blue');
-    const removeFavorite = document.querySelectorAll('.tovar__card-text-block-favorite_red');
+    if (window.innerWidth >= 1000) {
+        const addFavorite = document.querySelectorAll('.tovar__card-text-block-favorite_blue');
+        const removeFavorite = document.querySelectorAll('.tovar__card-text-block-favorite_red');
     
-    addFavorite.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            this.parentNode.classList.add('tovar__card-text-block-favorite--active');
+        addFavorite.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                this.parentNode.classList.add('tovar__card-text-block-favorite--active');
+            });
         });
-    });
 
-    removeFavorite.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            this.parentNode.classList.remove('tovar__card-text-block-favorite--active');
+        removeFavorite.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                this.parentNode.classList.remove('tovar__card-text-block-favorite--active');
+            });
         });
-    });
 
+    } else {
+        const burgerFavorite = document.querySelector('.tovar__card-text-block_cart-favorite_burger');
+    
+        burgerFavorite.addEventListener('click', function () {
+            this.classList.toggle('tovar__card-text-block_cart-favorite_burger--active');
+        });
+    }
     // counter
 
     const counter = document.querySelector('.tovar__card-text-block_cost-meter')

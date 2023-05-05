@@ -27,6 +27,12 @@
         align-items: center;
         gap: 30px;
         margin-bottom: 50px;
+        position: relative;
+        
+        >.sell {
+            top: 30px;
+        }
+
         &-pic {
             width: 100%;
             object-fit: cover;
@@ -62,6 +68,9 @@
                     justify-content: space-between;
                     p {
                         max-width: 379px;
+                    }
+                    span {
+                        color: #9c9c9c;
                     }
                 }
 
@@ -172,6 +181,12 @@
 
                 }
 
+                &-pic_mobile {
+                    &-block {
+                        display: none;
+                    }
+                }
+
                 &_cost {
                     display: flex;
                     align-items: center;
@@ -218,6 +233,8 @@
                         }
 
                         &-minus, &-plus {
+                            width: 19px;
+                            height: 19px;
                             svg {
                                 fill: #383838;
                                 transition: .3s all;
@@ -284,6 +301,7 @@
                         width: 51px;
                         height: 51px;
                         display: none;
+                        border-radius: 3px;
 
                         &:hover {
                             background: #0561ce;
@@ -301,6 +319,7 @@
                         width: 51px;
                         height: 51px;
                         display: none;
+                        border-radius: 3px;
 
                         &:hover {
                             background: #0561ce;
@@ -491,4 +510,246 @@
         }
     }
 
+}
+
+@media screen and (max-width:1000px) {
+    .tovar {
+        margin-top: 32px;
+        margin-bottom: 56px;
+
+        &__back-links {
+            margin-bottom: 32px;
+        }
+
+        &__card {
+            .fz36 {
+                font-size: 26px;
+                line-height: 32px;
+            }
+
+            &-text {
+                &-block {
+                    &_rate-stars {
+                        gap: 16px;
+                    }
+
+                    &_cost {
+                        &-block {
+                            gap: 20px;
+                        }
+                    }
+
+                    &_cart {
+                        &-cart {
+                            padding: 18px 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .tovar {
+        .wrapper {
+            padding: 0 8px;
+        }
+
+        &__card{
+            margin-bottom: 64px;
+            width: 100%;
+
+            &-pic {
+                &-block {
+                    display: none;
+                }
+            }
+
+            &-text{
+                width: 100%;
+                padding: 0;
+                background: transparent;
+
+                .fz36 {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+
+                &-block{
+                    padding-bottom: 16px;
+                    padding-top: 16px;
+                    border-bottom: 0;
+                    &-favorite {
+                        display: none;
+                    }
+                    &_name {
+                        border-bottom: 1px solid #c9c9c9;
+                        p {
+                            max-width: none;
+                        }
+                    }
+                    &_rate {
+                        justify-content: space-between;
+                        border-bottom: 1px solid #c9c9c9;
+                        &-share {
+                            display: none;
+                        }
+                    }
+
+                    &-pic_mobile {
+                        margin: 0 auto;
+                        &-block {
+                            display: block;
+                            position: relative;
+                            .sell {
+                                top: 24px;
+                                left: -8px;
+                                padding: 2px 9px 3px 10px;
+                                font-size: 14px;
+                                line-height: 17px;
+                            }
+                        }
+                        &-out {
+                            color: #E92626;
+                            position: absolute;
+                            left: 0;
+                            bottom: 26px;
+                        }
+                    }
+
+                    &_cost-block {
+                        gap: 24px;
+                    }
+
+                    &_cart {
+                        gap: 18px;
+                        &-out {
+                            display: none;
+                        }
+
+                        &-share {
+                            display: block;
+                        }
+
+                        &-favorite_burger {
+                            position: relative;
+                            display: block;
+                            &-white, &-red {
+                                position: absolute;
+                                top: 14px;
+                                transition: .3s all;
+                                width: 23px;
+                                height: 23px;
+                            }
+
+                            &-red {
+                                z-index: -1;
+                                transform: scale(0);
+                            }
+
+                            &--active &-white {
+                                z-index: -1;
+                                transform: scale(0);
+                            }
+
+                            &--active &-red {
+                                z-index: 1;
+                                transform: scale(1);
+                            }
+                        }
+
+                        &-cart {
+                            padding: 16px;
+                            max-width: 221px;
+                            width: 100%;
+                            justify-content: center;
+                            svg {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__char {
+            margin-bottom: 16px;
+        }
+
+        &__desc{
+            padding: 24px 16px;
+            &-review {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+
+                .fz18 {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+
+        &__review {
+            max-width: 100%;
+            padding: 24px 16px;
+            &-swiper {
+                &-slide {
+                    &-rate {
+                        &_desctop {
+                            display: none;
+                        }
+
+                        &_mobile {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .tovar {
+        &__char {
+            padding: 24px 16px;
+
+            .fz18 {
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            &-title {
+                margin-bottom: 16px;
+                padding-bottom: 24px;
+            }
+
+            &-text {
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+
+        &__desc {
+            &-title {
+                margin-bottom: 16px;
+                padding-bottom: 24px;
+            }
+        }
+        
+        &__review {
+            &-top {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .tovar__card-text-block_cost-block {
+        gap: 10px;
+    }
 }
