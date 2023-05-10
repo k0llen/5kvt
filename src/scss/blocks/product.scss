@@ -1,4 +1,4 @@
-.tovar {
+.product {
     margin-top: 20px;
     margin-bottom: 50px;
     &__back {
@@ -66,6 +66,8 @@
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
+                    font-size: 36px;
+                    line-height: 43px;
                     p {
                         max-width: 379px;
                     }
@@ -348,7 +350,9 @@
         padding: 30px;
         border-radius: 3px;
         background: #f7f7f7;
-        margin-bottom: 30px;
+        margin-bottom: 30px;            
+        font-size: 18px;
+            line-height: 22px;
         &-title {
             padding-bottom: 30px;
             margin-bottom: 30px;
@@ -359,6 +363,7 @@
             display: grid;
             grid-template-columns: repeat(2,1fr);
             gap: 20px 30px;
+
             &-block {
                 display: flex;
                 align-items: center;
@@ -504,6 +509,8 @@
 
                 &-text {
                     color: #9c9c9c;
+                    font-size: 18px;
+                    line-height: 22px;
                 }
             }
 
@@ -513,7 +520,7 @@
 }
 
 @media screen and (max-width:1000px) {
-    .tovar {
+    .product {
         margin-top: 32px;
         margin-bottom: 56px;
 
@@ -522,13 +529,14 @@
         }
 
         &__card {
-            .fz36 {
-                font-size: 26px;
-                line-height: 32px;
-            }
 
             &-text {
                 &-block {
+                    &_name {
+                        font-size: 26px;
+                        line-height: 32px;
+                    }
+
                     &_rate-stars {
                         gap: 16px;
                     }
@@ -536,6 +544,8 @@
                     &_cost {
                         &-block {
                             gap: 20px;
+                            font-size: 26px;
+                            line-height: 32px;
                         }
                     }
 
@@ -551,7 +561,7 @@
 }
 
 @media screen and (max-width: 834px) {
-    .tovar {
+    .product {
         .wrapper {
             padding: 0 8px;
         }
@@ -571,11 +581,6 @@
                 padding: 0;
                 background: transparent;
 
-                .fz36 {
-                    font-size: 24px;
-                    line-height: 29px;
-                }
-
                 &-block{
                     padding-bottom: 16px;
                     padding-top: 16px;
@@ -585,6 +590,8 @@
                     }
                     &_name {
                         border-bottom: 1px solid #c9c9c9;
+                        font-size: 24px;
+                        line-height: 29px;
                         p {
                             max-width: none;
                         }
@@ -620,6 +627,8 @@
 
                     &_cost-block {
                         gap: 24px;
+                        font-size: 24px;
+                        line-height: 29px;
                     }
 
                     &_cart {
@@ -683,11 +692,8 @@
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
-
-                .fz18 {
-                    font-size: 16px;
-                    line-height: 19px;
-                }
+                font-size: 16px;
+                line-height: 19px;
             }
         }
 
@@ -705,6 +711,11 @@
                             display: flex;
                         }
                     }
+
+                    &-text {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
                 }
             }
         }
@@ -712,19 +723,16 @@
 }
 
 @media screen and (max-width: 590px) {
-    .tovar {
-        &__back-links.fz16 {
+    .product {
+        &__back-links {
             font-size: 14px;
             line-height: 18px;
         }
 
         &__char {
             padding: 24px 16px;
-
-            .fz18 {
-                font-size: 16px;
-                line-height: 19px;
-            }
+            font-size: 16px;
+            line-height: 19px;
 
             &-title {
                 margin-bottom: 16px;
@@ -753,7 +761,7 @@
 }
 
 @media screen and (max-width: 340px) {
-    .tovar__card-text-block_cost-block {
+    .product__card-text-block_cost-block {
         gap: 10px;
     }
 }
