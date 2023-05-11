@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Резчик швов</title>
+    <title>Каталог товаров</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
@@ -3726,632 +3726,576 @@
 </header>
 <main class="main">
 
-<section class="product">
+<section class="catalog">
     <div class="wrapper">
-        <div class="product__back-links fz16">
-            <a href="./index.html" class="product__back-link">Главная</a>
+        <div class="catalog__back-links fz16">
+            <a href="./index.html" class="catalog__back-link">Главная</a>
             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.6665 9.5L7.91651 14.25L7.91651 4.75L12.6665 9.5Z" fill="#9C9C9C"/>
-            </svg>  
-            <a href="./index.html" class="product__back-link">Каталог товаров</a>
-            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.6665 9.5L7.91651 14.25L7.91651 4.75L12.6665 9.5Z" fill="#9C9C9C"/>
-            </svg>              
-            <p class="product__back-current">Карточка товара</p>
+            </svg>                
+            <p class="catalog__back-current">Каталог товаров</p>
         </div>
-        <div class="product__card">
-            <div class="product__card-pic-block">
-                <img src="./img/rezshik-shvov-big.png" alt="" class="product__card-pic">
-                <div class="sell">SELL</div>
+        <div class="catalog__top">
+            <h2 class="catalog__title section-title">Каталог товаров</h2>
+            <div class="catalog__filters">
+                <div class="catalog__filters-sort fz16">
+                    <div class="catalog__filters-name">
+                        Сортировать:
+                    </div>
+                    <div class="catalog__filters-dropdown">
+                        <button class="catalog__filters-dropdown-button">
+                            по актуальности
+                        </button>
+                        <ul class="catalog__filters-dropdown-list">
+                            <li class="catalog__filters-dropdown-list-item" data-value="vozrastanie">
+                                по возрастанию
+                            </li>
+                            <li class="catalog__filters-dropdown-list-item" data-value="ubivanie">
+                                по убыванию
+                            </li>
+                            <li class="catalog__filters-dropdown-list-item" data-value="aktualnost">
+                                по актуальности
+                            </li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="catalog__filters-dropdown-input-hidden" >
+                    </div>
+                </div>
+                <div class="catalog__filters-show fz16">
+                    <div class="catalog__filters-name">
+                        Показывать:
+                    </div>
+                    <div class="catalog__filters-dropdown">
+                        <button class="catalog__filters-dropdown-button">
+                            по 9
+                        </button>
+                        <ul class="catalog__filters-dropdown-list">
+                            <li class="catalog__filters-dropdown-list-item" data-value="9">
+                                по 9
+                            </li>
+                            <li class="catalog__filters-dropdown-list-item" data-value="12">
+                                    по 12
+                            </li>
+                            <li class="catalog__filters-dropdown-list-item" data-value="15">
+                                    по 15
+                            </li>
+                            <li class="catalog__filters-dropdown-list-item" data-value="18">
+                                    по 18
+                            </li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="catalog__filters-dropdown-input-hidden" >
+                    </div>
+                </div>
+                <div class="catalog__side-burger-open">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_38_630)">
+                        <path d="M6.17 18C6.3766 17.4145 6.75974 16.9074 7.2666 16.5488C7.77346 16.1901 8.37909 15.9976 9 15.9976C9.62091 15.9976 10.2265 16.1901 10.7334 16.5488C11.2403 16.9074 11.6234 17.4145 11.83 18H22V20H11.83C11.6234 20.5855 11.2403 21.0926 10.7334 21.4512C10.2265 21.8099 9.62091 22.0025 9 22.0025C8.37909 22.0025 7.77346 21.8099 7.2666 21.4512C6.75974 21.0926 6.3766 20.5855 6.17 20H2V18H6.17ZM12.17 11C12.3766 10.4145 12.7597 9.90743 13.2666 9.54879C13.7735 9.19015 14.3791 8.99755 15 8.99755C15.6209 8.99755 16.2265 9.19015 16.7334 9.54879C17.2403 9.90743 17.6234 10.4145 17.83 11H22V13H17.83C17.6234 13.5855 17.2403 14.0926 16.7334 14.4512C16.2265 14.8099 15.6209 15.0025 15 15.0025C14.3791 15.0025 13.7735 14.8099 13.2666 14.4512C12.7597 14.0926 12.3766 13.5855 12.17 13H2V11H12.17ZM6.17 4C6.3766 3.41447 6.75974 2.90744 7.2666 2.54879C7.77346 2.19015 8.37909 1.99755 9 1.99755C9.62091 1.99755 10.2265 2.19015 10.7334 2.54879C11.2403 2.90744 11.6234 3.41447 11.83 4H22V6H11.83C11.6234 6.58553 11.2403 7.09257 10.7334 7.45121C10.2265 7.80986 9.62091 8.00245 9 8.00245C8.37909 8.00245 7.77346 7.80986 7.2666 7.45121C6.75974 7.09257 6.3766 6.58553 6.17 6H2V4H6.17ZM9 6C9.26522 6 9.51957 5.89464 9.70711 5.70711C9.89464 5.51957 10 5.26522 10 5C10 4.73478 9.89464 4.48043 9.70711 4.29289C9.51957 4.10536 9.26522 4 9 4C8.73478 4 8.48043 4.10536 8.29289 4.29289C8.10536 4.48043 8 4.73478 8 5C8 5.26522 8.10536 5.51957 8.29289 5.70711C8.48043 5.89464 8.73478 6 9 6ZM15 13C15.2652 13 15.5196 12.8946 15.7071 12.7071C15.8946 12.5196 16 12.2652 16 12C16 11.7348 15.8946 11.4804 15.7071 11.2929C15.5196 11.1054 15.2652 11 15 11C14.7348 11 14.4804 11.1054 14.2929 11.2929C14.1054 11.4804 14 11.7348 14 12C14 12.2652 14.1054 12.5196 14.2929 12.7071C14.4804 12.8946 14.7348 13 15 13ZM9 20C9.26522 20 9.51957 19.8946 9.70711 19.7071C9.89464 19.5196 10 19.2652 10 19C10 18.7348 9.89464 18.4804 9.70711 18.2929C9.51957 18.1054 9.26522 18 9 18C8.73478 18 8.48043 18.1054 8.29289 18.2929C8.10536 18.4804 8 18.7348 8 19C8 19.2652 8.10536 19.5196 8.29289 19.7071C8.48043 19.8946 8.73478 20 9 20Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_38_630">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                        
+                </div>
             </div>
-            <div class="product__card-text">
-                <div class="product__card-text-block product__card-text-block_name fz36">
-                    <p>Резчик швов <span>DIAM JRK-500/13.0L 630058</span></p>
-                    <div class="product__card-text-block-favorite">
-                        <button class="product__card-text-block-favorite_blue">
+        </div>
+        <div class="catalog__wrapper">
+            <aside class="catalog__side">
+                <div class="catalog__side-selects catalog__side-block">
+                    <div class="catalog__side-select">
+                        <div class="catalog__side-select-name fz18 catalog__side-block-title">
+                            Категория
+                        </div>
+                        <div class="catalog__side-select-dropdown fz16">
+                            <button class="catalog__side-select-dropdown-button">
+                                Отопление
+                            </button>
+                            <ul class="catalog__side-select-dropdown-list">
+                                <li class="catalog__side-select-dropdown-list-item" data-value="otoplenie">
+                                    Отопление
+                                </li>
+                                <li class="catalog__side-select-dropdown-list-item" data-value="osveshenie">
+                                    Освещение
+                                </li>
+                                <li class="catalog__side-select-dropdown-list-item" data-value="dlya-dachi">
+                                    Для дачи
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value="" class="catalog__side-select-dropdown-input-hidden" >
+                        </div>
+                    </div>
+                    <div class="catalog__side-select">
+                        <div class="catalog__side-select-name fz18 catalog__side-block-title">
+                            Подкатегория
+                        </div>
+                        <div class="catalog__side-select-dropdown fz16">
+                            <button class="catalog__side-select-dropdown-button">
+                                Радиаторы
+                            </button>
+                            <ul class="catalog__side-select-dropdown-list">
+                                <li class="catalog__side-select-dropdown-list-item" data-value="radiatori">
+                                    Радиаторы
+                                </li>
+                                <li class="catalog__side-select-dropdown-list-item" data-value="condicioneri">
+                                    Кондиционеры
+                                </li>
+                                <li class="catalog__side-select-dropdown-list-item" data-value="pechi">
+                                    Печи
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value="" class="catalog__side-select-dropdown-input-hidden" >
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__side-cost catalog__side-block" >
+                    <div class="catalog__side-block-title fz18">
+                        Цена
+                    </div>
+                    <div class="catalog__side-cost-inputs">
+                        <input type="text" class="catalog__side-cost-min" placeholder="от">
+                        <svg width="3" height="10" viewBox="0 0 3 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 7.884C0 7.728 0.027 7.581 0.081 7.443C0.141 7.305 0.219 7.185 0.315 7.083C0.417 6.981 0.537 6.9 0.675 6.84C0.813 6.78 0.96 6.75 1.116 6.75C1.272 6.75 1.419 6.78 1.557 6.84C1.695 6.9 1.815 6.981 1.917 7.083C2.019 7.185 2.1 7.305 2.16 7.443C2.22 7.581 2.25 7.728 2.25 7.884C2.25 8.046 2.22 8.196 2.16 8.334C2.1 8.466 2.019 8.583 1.917 8.685C1.815 8.787 1.695 8.865 1.557 8.919C1.419 8.979 1.272 9.009 1.116 9.009C0.96 9.009 0.813 8.979 0.675 8.919C0.537 8.865 0.417 8.787 0.315 8.685C0.219 8.583 0.141 8.466 0.081 8.334C0.027 8.196 0 8.046 0 7.884ZM0 1.134C0 0.978 0.027 0.831 0.081 0.693C0.141 0.555 0.219 0.435 0.315 0.333C0.417 0.231 0.537 0.15 0.675 0.0899999C0.813 0.03 0.96 0 1.116 0C1.272 0 1.419 0.03 1.557 0.0899999C1.695 0.15 1.815 0.231 1.917 0.333C2.019 0.435 2.1 0.555 2.16 0.693C2.22 0.831 2.25 0.978 2.25 1.134C2.25 1.296 2.22 1.446 2.16 1.584C2.1 1.716 2.019 1.833 1.917 1.935C1.815 2.037 1.695 2.118 1.557 2.178C1.419 2.232 1.272 2.259 1.116 2.259C0.96 2.259 0.813 2.232 0.675 2.178C0.537 2.118 0.417 2.037 0.315 1.935C0.219 1.833 0.141 1.716 0.081 1.584C0.027 1.446 0 1.296 0 1.134Z" fill="#1074EB"/>
+                        </svg>                  
+                        <input type="text" class="catalog__side-cost-max" placeholder="до">
+                    </div>
+                </div>
+                <div class="catalog__side-brand catalog__side-block">
+                    <div class="catalog__side-block-title fz18">
+                        Бренд
+                    </div>
+                    <div class="catalog__side-brand-checkboxes">
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-brand-checkbox-label">Bosh</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-brand-checkbox-label">Huter</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-brand-checkbox-label">Echo</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-brand-checkbox-label">Diam</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-brand-checkbox-label">Pecahta</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="catalog__side-rate catalog__side-block">
+                    <div class="catalog__side-block-title fz18">
+                        Рейтинг
+                    </div>
+                    <div class="catalog__side-rate-stars">
+                        <input type="radio" name="appereance" value="5" id="appereance_5">
+                        <label for="appereance_5" class="catalog__side-rate-star">
+                            <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" />
+                            </svg>
+                        </label>
+                        <input type="radio" name="appereance" value="4" id="appereance_4">
+                        <label for="appereance_4" class="catalog__side-rate-star">
+                            <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" />
+                            </svg>
+                        </label>
+                        <input type="radio" name="appereance" value="3" id="appereance_3">
+                        <label for="appereance_3" class="catalog__side-rate-star">
+                            <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" />
+                            </svg>
+                        </label>
+                        <input type="radio" name="appereance" value="2" id="appereance_2">
+                        <label for="appereance_2" class="catalog__side-rate-star">
+                            <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" />
+                            </svg>
+                        </label>
+                        <input type="radio" name="appereance" value="1" id="appereance_1">
+                        <label for="appereance_1" class="catalog__side-rate-star">
+                            <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="catalog__side-else catalog__side-block">
+                    <div class="catalog__side-block-title fz18">
+                        Другое
+                    </div>
+                    <div class="catalog__side-else-checkboxes">
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-else-checkbox-label">Новинки</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-else-checkbox-label">Скидки</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="catalog__side-ship catalog__side-block">
+                    <div class="catalog__side-block-title fz18">
+                        Доставка и наличие
+                    </div>
+                    <div class="catalog__side-ship-checkboxes">
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-ship-checkbox-label">Доставка</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-ship-checkbox-label">Самовывоз</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-ship-checkbox-label">Под заказ</p>
+                        </label>
+                        <label class="fz16">
+                            <input type="checkbox" class="real-checkbox">
+                            <span class="custom-checkbox"></span>
+                            <p class="catalog__side-ship-checkbox-label">В наличии</p>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+            <div class="catalog__main">
+                <div class="catalog__cards">
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/month-pics/stanok-dlya-zatochki-cepey.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">HUTER ECS-100</a>
+                            <p class="fw400">Станок для заточки цепей</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <p>2 441 ₽</p>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
                             <img src="./img/svg/blue-hearth.svg" alt="">
                         </button>
-                        <button class="product__card-text-block-favorite_red  ">
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
                             <img src="./img/svg/red-hearth.svg" alt="">
                         </button>
                     </div>
-                </div>
-                <div class="product__card-text-block product__card-text-block_rate">
-                    <div class="product__card-text-block_rate-stars">
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" fill="#FFC700" />
-                        </svg>
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" fill="#FFC700" />
-                        </svg>
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" fill="#FFC700" />
-                        </svg>
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" fill="#FFC700" />
-                        </svg>
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.5 0L15.3064 8.63729H24.3882L17.0409 13.9754L19.8473 22.6127L12.5 17.2746L5.15268 22.6127L7.95911 13.9754L0.611794 8.63729H9.69357L12.5 0Z" fill="#9C9C9C" />
-                        </svg>
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/month-pics/setevoy-shurupovert.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">Ресанта СШ-550-2</a>
+                            <p class="fw400">Сетевой шуруповерт</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <p>2 362 ₽</p>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
                     </div>
-                    <a href="#!" class="product__card-text-block_rate-reviews fz16">Отзывы <span class="product__card-block-text_rate-reviews-count">(0)</span></a>
-                    <a href="#!" class="product__card-text-block_rate-share">
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/month-pics/stabilizator-napryazheniya.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">РЕСАНТА АСН-600/1-И</a>
+                            <p class="fw400">Стабилизатор напряжения стабилизатор напряжения</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <p>7 185 ₽</p>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
+                        <div class="new">NEW</div>
+                    </div>
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/month-pics/stabilizator-napryazheniya.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">РЕСАНТА АСН-600/1-И</a>
+                            <p class="fw400">Стабилизатор напряжения</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <p>7 185 ₽</p>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
+                        <div class="new">NEW</div>
+                    </div>
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/latest-pics/electro-pushka.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">РЕСАНТА ТЭПК-3000K</a>
+                            <p class="fw400">Электрическая пушка</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <p>3 007 ₽</p>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
+                        <div class="new">NEW</div>
+                    </div>
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/sale-pics/rezshik-shvov.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">DIAM JRK-500/13.0L 630058</a>
+                            <p class="fw400">Резчик швов</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <div class="catalog__card-cost-text">
+                                <p>85 200 ₽</p>
+                                <p class="catalog__card-cost-recent">93 200</p>
+                            </div>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
+                        <div class="sell">SELL</div>
+                    </div>
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/sale-pics/benzonojnitsi.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">Echo HCR-165ES</a>
+                            <p class="fw400">Бензоножницы</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <div class="catalog__card-cost-text">
+                                <p>40 700 ₽</p>
+                                <p class="catalog__card-cost-recent">44 700</p>
+                            </div>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
+                        <div class="sell">SELL</div>
+                    </div>
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/sale-pics/rezshik-shvov.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">DIAM JRK-500/13.0L 630058</a>
+                            <p class="fw400">Резчик швов</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <div class="catalog__card-cost-text">
+                                <p>85 200 ₽</p>
+                                <p class="catalog__card-cost-recent">93 200</p>
+                            </div>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
+                        <div class="sell">SELL</div>
+                    </div>
+                    <div class="catalog__card">
+                        <a href="#!" class="catalog__card-link">
+                            <img src="./img/sale-pics/almaznij-disk.png" alt="" class="catalog__card-pic">
+                        </a>
+                        <div class="catalog__card-desc fz18">
+                            <a href="#!" class="fw500 catalog__card-link-text">DIAM Master Line</a>
+                            <p class="fw400">Алмазный диск (круг)</p>
+                        </div>
+                        <div class="catalog__card-cost fz24 fw500">
+                            <div class="catalog__card-cost-text">
+                                <p>1 280 ₽</p>
+                                <p class="catalog__card-cost-recent">1 680</p>
+                            </div>
+                            <button class="catalog__card-parametres">
+                                <img src="./img/svg/blue-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog__card-cart-param">
+                            <button class="catalog__card-cart fz16">
+                                <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
+                                <p>В корзину</p>
+                            </button>
+                            <button class="catalog__card-parametres_mobile">
+                                <img src="./img/svg/white-parametres.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="catalog__card-favorite_blue catalog__card-favorite">
+                            <img src="./img/svg/blue-hearth.svg" alt="">
+                        </button>
+                        <button class="catalog__card-favorite_red catalog__card-favorite">
+                            <img src="./img/svg/red-hearth.svg" alt="">
+                        </button>
+                        <div class="sell">SELL</div>
+                    </div>
+                </div>
+                <div class="catalog__pagination fz16">
+                    <div class="catalog__pagination-prev">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_37_1167)">
-                            <path d="M14.1417 17.9906L8.81878 15.0875C8.30783 15.5947 7.65817 15.9392 6.95168 16.0777C6.2452 16.2162 5.51353 16.1425 4.84891 15.8657C4.18429 15.589 3.61648 15.1217 3.21706 14.5227C2.81764 13.9237 2.60449 13.2199 2.60449 12.5C2.60449 11.7801 2.81764 11.0763 3.21706 10.4773C3.61648 9.87832 4.18429 9.41101 4.84891 9.13427C5.51353 8.85754 6.2452 8.78377 6.95168 8.92227C7.65817 9.06076 8.30783 9.40532 8.81878 9.9125L14.1417 7.00938C13.9591 6.15285 14.091 5.25923 14.5131 4.49193C14.9353 3.72464 15.6195 3.13493 16.4408 2.83066C17.262 2.52639 18.1653 2.52789 18.9855 2.83488C19.8056 3.14188 20.4879 3.73385 20.9075 4.50254C21.3271 5.27124 21.456 6.16529 21.2706 7.0212C21.0852 7.87712 20.5979 8.6377 19.8978 9.16386C19.1978 9.69002 18.3317 9.94659 17.458 9.88667C16.5843 9.82674 15.7613 9.45432 15.1396 8.8375L9.81669 11.7406C9.92287 12.2413 9.92287 12.7587 9.81669 13.2594L15.1396 16.1625C15.7613 15.5457 16.5843 15.1733 17.458 15.1133C18.3317 15.0534 19.1978 15.31 19.8978 15.8361C20.5979 16.3623 21.0852 17.1229 21.2706 17.9788C21.456 18.8347 21.3271 19.7288 20.9075 20.4975C20.4879 21.2662 19.8056 21.8581 18.9855 22.1651C18.1653 22.4721 17.262 22.4736 16.4408 22.1693C15.6195 21.8651 14.9353 21.2754 14.5131 20.5081C14.091 19.7408 13.9591 18.8472 14.1417 17.9906V17.9906Z"/>
+                            <g clip-path="url(#clip0_36_733)">
+                            <path d="M8.3335 12.5L14.5835 6.25V18.75L8.3335 12.5Z" fill="white"/>
                             </g>
                             <defs>
-                            <clipPath id="clip0_37_1167">
+                            <clipPath id="clip0_36_733">
                             <rect width="25" height="25" fill="white"/>
                             </clipPath>
                             </defs>
                         </svg>                            
-                    </a>
-                </div>
-                <div class="product__card-text-block product__card-text-block_articul fz16">
-                    <p class="product__card-text-block_articul-articul">Артикул: <span>1129973</span></p>
-                    <p class="product__card-text-block_articul-model">Модель: <span>1129973</span></p>
-                </div>
-                <div class="product__card-text-block product__card-text-block-pic_mobile-block">
-                    <img src="./img/rezshik-shvov-mobile.png" alt="" class="product__card-text-block-pic_mobile">
-                    <div class="sell">SELL</div>
-                    <div class="product__card-text-block-pic_mobile-out fz16">
-                        Нет в наличии
                     </div>
-                </div>
-                <div class="product__card-text-block product__card-text-block_cost">
-                    <div class="product__card-text-block_cost-block fz36 fw500">
-                        <p class="product__card-text-block_cost-actual"><span class="product__card-text-block_cost-actual-num">85200</span> ₽</p>
-                        <div class="product__card-text-block_cost-recent">93200</div>
+                    <div class="catalog__pagination-numbers">
+                        <span class="catalog__pagination-current">1</span>
+                        <span>2</span>
+                        <span>...</span>
+                        <span>12</span>
                     </div>
-                    <div class="product__card-text-block_cost-meter">
-                        <button class="product__card-text-block_cost-meter-minus product__card-text-block_cost-meter_button">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_38_694)">
-                                <path d="M3.95801 8.70831H15.0413V10.2916H3.95801V8.70831Z"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_38_694">
-                                <rect width="19" height="19" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>                                
-                        </button>
-                        <input type="text" value="1" disabled class="fz16 product__card-text-block_cost-meter-input">
-                        <button class="product__card-text-block_cost-meter-plus product__card-text-block_cost-meter_button">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_38_697)">
-                                <path d="M8.70801 8.70831V3.95831H10.2913V8.70831H15.0413V10.2916H10.2913V15.0416H8.70801V10.2916H3.95801V8.70831H8.70801Z"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_38_697">
-                                <rect width="19" height="19" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>                                
-                        </button>
-                    </div>
-                </div>
-                <div class="product__card-text-block product__card-text-block_cart">
-                    <button class="product__card-text-block_cart-cart">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_37_1188)">
-                            <path d="M3.16683 12.6666V3.16665H1.5835V1.58331H3.9585C4.16846 1.58331 4.36982 1.66672 4.51829 1.81519C4.66675 1.96365 4.75016 2.16502 4.75016 2.37498V11.875H14.5969L16.1802 5.54165H6.3335V3.95831H17.1952C17.3155 3.95832 17.4343 3.98575 17.5424 4.03854C17.6505 4.09132 17.7452 4.16807 17.8193 4.26294C17.8933 4.35781 17.9447 4.4683 17.9696 4.58603C17.9946 4.70376 17.9923 4.82562 17.9631 4.94235L15.9839 12.859C15.941 13.0302 15.8422 13.1822 15.703 13.2908C15.5639 13.3993 15.3925 13.4583 15.216 13.4583H3.9585C3.74853 13.4583 3.54717 13.3749 3.3987 13.2264C3.25024 13.078 3.16683 12.8766 3.16683 12.6666ZM4.75016 18.2083C4.33024 18.2083 3.92751 18.0415 3.63058 17.7446C3.33364 17.4476 3.16683 17.0449 3.16683 16.625C3.16683 16.2051 3.33364 15.8023 3.63058 15.5054C3.92751 15.2085 4.33024 15.0416 4.75016 15.0416C5.17009 15.0416 5.57282 15.2085 5.86975 15.5054C6.16668 15.8023 6.3335 16.2051 6.3335 16.625C6.3335 17.0449 6.16668 17.4476 5.86975 17.7446C5.57282 18.0415 5.17009 18.2083 4.75016 18.2083ZM14.2502 18.2083C13.8302 18.2083 13.4275 18.0415 13.1306 17.7446C12.8336 17.4476 12.6668 17.0449 12.6668 16.625C12.6668 16.2051 12.8336 15.8023 13.1306 15.5054C13.4275 15.2085 13.8302 15.0416 14.2502 15.0416C14.6701 15.0416 15.0728 15.2085 15.3697 15.5054C15.6667 15.8023 15.8335 16.2051 15.8335 16.625C15.8335 17.0449 15.6667 17.4476 15.3697 17.7446C15.0728 18.0415 14.6701 18.2083 14.2502 18.2083Z" fill="white"/>
+                    <div class="catalog__pagination-next">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_36_738)">
+                            <path d="M16.6665 12.5L10.4165 18.75L10.4165 6.25L16.6665 12.5Z" fill="white"/>
                             </g>
                             <defs>
-                            <clipPath id="clip0_37_1188">
-                            <rect width="19" height="19" fill="white"/>
+                            <clipPath id="clip0_36_738">
+                            <rect width="25" height="25" fill="white" transform="translate(25 25) rotate(180)"/>
                             </clipPath>
                             </defs>
                         </svg>                            
-                        <p>В корзину</p>
-                    </button>
-                    <div class="product__card-text-block_cart-follow-share">
-                        <button class="product__card-text-block_cart-favorite_burger">
-                            <img src="./img/svg/white-hearth.svg" alt="" class="product__card-text-block_cart-favorite_burger-white">
-                            <img src="./img/svg/red-hearth.svg" alt="" class="product__card-text-block_cart-favorite_burger-red">
-                        </button>
-                        <a href="#!" class="product__card-text-block_cart-share">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_37_1167)">
-                                <path d="M14.1417 17.9906L8.81878 15.0875C8.30783 15.5947 7.65817 15.9392 6.95168 16.0777C6.2452 16.2162 5.51353 16.1425 4.84891 15.8657C4.18429 15.589 3.61648 15.1217 3.21706 14.5227C2.81764 13.9237 2.60449 13.2199 2.60449 12.5C2.60449 11.7801 2.81764 11.0763 3.21706 10.4773C3.61648 9.87832 4.18429 9.41101 4.84891 9.13427C5.51353 8.85754 6.2452 8.78377 6.95168 8.92227C7.65817 9.06076 8.30783 9.40532 8.81878 9.9125L14.1417 7.00938C13.9591 6.15285 14.091 5.25923 14.5131 4.49193C14.9353 3.72464 15.6195 3.13493 16.4408 2.83066C17.262 2.52639 18.1653 2.52789 18.9855 2.83488C19.8056 3.14188 20.4879 3.73385 20.9075 4.50254C21.3271 5.27124 21.456 6.16529 21.2706 7.0212C21.0852 7.87712 20.5979 8.6377 19.8978 9.16386C19.1978 9.69002 18.3317 9.94659 17.458 9.88667C16.5843 9.82674 15.7613 9.45432 15.1396 8.8375L9.81669 11.7406C9.92287 12.2413 9.92287 12.7587 9.81669 13.2594L15.1396 16.1625C15.7613 15.5457 16.5843 15.1733 17.458 15.1133C18.3317 15.0534 19.1978 15.31 19.8978 15.8361C20.5979 16.3623 21.0852 17.1229 21.2706 17.9788C21.456 18.8347 21.3271 19.7288 20.9075 20.4975C20.4879 21.2662 19.8056 21.8581 18.9855 22.1651C18.1653 22.4721 17.262 22.4736 16.4408 22.1693C15.6195 21.8651 14.9353 21.2754 14.5131 20.5081C14.091 19.7408 13.9591 18.8472 14.1417 17.9906V17.9906Z" fill="#FFFFFF"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_37_1167">
-                                <rect width="25" height="25" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>                            
-                        </a>
                     </div>
-                    <div class="product__card-text-block_cart-out fz16">
-                        <img src="./img/svg/out-of-stock.svg" alt="">
-                        <p>Нет в наличии</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="product__char">
-            <p class="product__char-title fz24">
-                Характеристики
-            </p>
-            <div class="product__char-text ">
-                <div class="product__char-text-block ">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-                <div class="product__char-text-block">
-                    <p class="product__char-text-name">Характеристика</p>
-                    <p class="product__char-text-value">Значение</p>
-                </div>
-            </div>
-        </div>
-        <div class="product__desc-review">
-            <div class="product__desc">
-                <p class="product__desc-title fz24">
-                    Описание
-                </p>
-                <div class="product__desc-desc">
-                    Резчик швов DIAM JRK-500/13.0L арт. 630058 -предназначендля нарезания швов в асфальте при дорожном строительстве и ремонте дорог, для нарезания температурных швов в бетоне, и проведения других строительных работ. Швонарезчик DIAM JRK-500/13.0L оснащен бензиновым двигателям LONCIN, модель 389cc. Использование алмазных дисков DIAM для сухой резки, позволяет резать материал без подачи воды.
-                </div>
-            </div>
-            <div class="product__review">
-                <div class="product__review-top">
-                    <p class="product__review-title fz24">Отзывы</p>
-                    <div class="product__review-buttons">
-                        <span class="product__review-swiper-button-prev">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.09326 8.99999L10.4537 4.63953V13.3605L6.09326 8.99999Z" fill="white"/>
-                            </svg>                                                          
-                        </span>
-                        <span class="product__review-swiper-button-next">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11.9067 9.00001L7.54628 13.3605L7.54628 4.63954L11.9067 9.00001Z" fill="white"/>
-                            </svg>                                                 
-                        </span>
-                    </div>
-                </div>
-                <div class="product__review-swiper swiper">
-                    <div class="product__review-swiper-wrapper swiper-wrapper">
-                        <div class="product__review-swiper-slide swiper-slide">
-                            <div class="product__review-swiper-slide-top">
-                                <div class="product__review-swiper-slide-name-block">
-                                    <div class="product__review-swiper-slide-pic-block" alt="">
-                                        <img class="product__review-swiper-slide-pic" src="./img/product-pics/review-pic.png" alt="">
-                                    </div>
-                                    <p class="product__review__swiper-slide-name">Иван Абрамов</p>
-                                </div>
-                                <div class="product__review-swiper-slide-rate_desctop">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>                                                                                      
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>     
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>     
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.6111 0L12.9435 7.57735H20.4915L14.385 12.2604L16.7175 19.8378L10.6111 15.1547L4.50462 19.8378L6.83707 12.2604L0.730637 7.57735H8.27861L10.6111 0Z" fill="#9C9C9C"/>
-                                    </svg>                                        
-                                </div>
-                                <div class="product__review-swiper-slide-rate_mobile">
-                                    <p class="product__review-swiper-slide-rate_mobile-count">4</p>
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>                                     
-                                </div>
-                            </div>
-                            <div class="product__review-swiper-slide-text ">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                            </div>
-                        </div>
-                        <div class="product__review-swiper-slide swiper-slide">
-                            <div class="product__review-swiper-slide-top">
-                                <div class="product__review-swiper-slide-name-block">
-                                    <div class="product__review-swiper-slide-pic-block" alt="">
-                                        <img class="product__review-swiper-slide-pic" src="./img/product-pics/review-pic.png" alt="">
-                                    </div>
-                                    <p class="product__review__swiper-slide-name">Иван Абрамов</p>
-                                </div>
-                                <div class="product__review-swiper-slide-rate_desctop">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>                                                                                      
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>     
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>     
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.6111 0L12.9435 7.57735H20.4915L14.385 12.2604L16.7175 19.8378L10.6111 15.1547L4.50462 19.8378L6.83707 12.2604L0.730637 7.57735H8.27861L10.6111 0Z" fill="#9C9C9C"/>
-                                    </svg>                                        
-                                </div>
-                                <div class="product__review-swiper-slide-rate_mobile">
-                                    <p class="product__review-swiper-slide-rate_mobile-count">4</p>
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>                                     
-                                </div>
-                            </div>
-                            <div class="product__review-swiper-slide-text">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                            </div>
-                        </div>
-                        <div class="product__review-swiper-slide swiper-slide">
-                            <div class="product__review-swiper-slide-top">
-                                <div class="product__review-swiper-slide-name-block">
-                                    <div class="product__review-swiper-slide-pic-block" alt="">
-                                        <img class="product__review-swiper-slide-pic" src="./img/product-pics/review-pic.png" alt="">
-                                    </div>
-                                    <p class="product__review__swiper-slide-name">Иван Абрамов</p>
-                                </div>
-                                <div class="product__review-swiper-slide-rate_desctop">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>                                                                                      
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>     
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>     
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.6111 0L12.9435 7.57735H20.4915L14.385 12.2604L16.7175 19.8378L10.6111 15.1547L4.50462 19.8378L6.83707 12.2604L0.730637 7.57735H8.27861L10.6111 0Z" fill="#9C9C9C"/>
-                                    </svg>                                        
-                                </div>
-                                <div class="product__review-swiper-slide-rate_mobile">
-                                    <p class="product__review-swiper-slide-rate_mobile-count">4</p>
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.3889 0L12.7213 7.57735H20.2693L14.1629 12.2604L16.4953 19.8378L10.3889 15.1547L4.28245 19.8378L6.6149 12.2604L0.508469 7.57735H8.05644L10.3889 0Z" fill="#FFC700"/>
-                                    </svg>                                     
-                                </div>
-                            </div>
-                            <div class="product__review-swiper-slide-text ">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="else">
-    <div class="wrapper">
-        <div class="else__top">
-            <h2 class="else__title section-title">
-                С этим товаром покупают
-            </h2>
-            <div class="else__buttons">
-                <span class="else__swiper-button-prev">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_40_27)">
-                            <path d="M8.33325 12.5L14.5833 6.25V18.75L8.33325 12.5Z" fill="white" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_40_27">
-                                <rect width="25" height="25" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </span>
-                <span class="else__swiper-button-next">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_40_30)">
-                            <path d="M16.6667 12.5L10.4167 18.75L10.4167 6.25L16.6667 12.5Z" fill="white" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_40_30">
-                                <rect width="25" height="25" fill="white" transform="translate(25 25) rotate(180)" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </span>
-            </div>
-        </div>
-        <div class="else__swiper swiper">
-            <div class="swiper-wrapper else__swiper-wrapper">
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/stanok-dlya-zatochki-cepey.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">HUTER ECS-100</a>
-                        <p class="fw400">Станок для заточки цепей</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <p>2 441 ₽</p>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                </div>
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/setevoy-shurupovert.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">Ресанта СШ-550-2</a>
-                        <p class="fw400">Сетевой шуруповерт</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <p>2 362 ₽</p>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                </div>
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/stabilizator-napryazheniya.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">РЕСАНТА АСН-600/1-И</a>
-                        <p class="fw400">Стабилизатор напряжения стабилизатор напряжения</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <p>2 441 ₽</p>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                    <div class="new">NEW</div>
-                </div>
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/rezshik-shvov.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">DIAM JRK-500/13.0L 630058</a>
-                        <p class="fw400">Резчик швов</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <div class="else__swiper-slide-cost-text">
-                            <p>85 200 ₽</p>
-                            <p class="else__swiper-slide-cost-recent">93 200</p>
-                        </div>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                    <div class="sell">SELL</div>
-                </div>
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/stanok-dlya-zatochki-cepey.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">HUTER ECS-100</a>
-                        <p class="fw400">Станок для заточки цепей</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <p>2 441 ₽</p>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                </div>
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/setevoy-shurupovert.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc ">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">Ресанта СШ-550-2</a>
-                        <p class="fw400">Сетевой шуруповерт</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <p>2 362 ₽</p>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                </div>
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/stabilizator-napryazheniya.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc ">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">РЕСАНТА АСН-600/1-И</a>
-                        <p class="fw400">Стабилизатор напряжения стабилизатор напряжения</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <p>2 441 ₽</p>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                    <div class="new">NEW</div>
-                </div>
-                <div class="else__swiper-slide swiper-slide">
-                    <a href="#!" class="else__swiper-slide-link">
-                        <img src="./img/month-pics/rezshik-shvov.png" alt="" class="else__swiper-slide-pic">
-                    </a>
-                    <div class="else__swiper-slide-desc ">
-                        <a href="#!" class="fw500 else__swiper-slide-link-text">DIAM JRK-500/13.0L 630058</a>
-                        <p class="fw400">Резчик швов</p>
-                    </div>
-                    <div class="else__swiper-slide-cost fz24 fw500">
-                        <div class="else__swiper-slide-cost-text">
-                            <p>85 200 ₽</p>
-                            <p class="else__swiper-slide-cost-recent">93 200</p>
-                        </div>
-                        <button class="else__swiper-slide-parametres">
-                            <img src="./img/svg/blue-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="else__swiper-slide-cart-param">
-                        <button class="else__swiper-slide-cart fz16">
-                            <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
-                            <p>В корзину</p>
-                        </button>
-                        <button class="else__swiper-slide-parametres_mobile">
-                            <img src="./img/svg/white-parametres.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
-                        <img src="./img/svg/blue-hearth.svg" alt="">
-                    </button>
-                    <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
-                        <img src="./img/svg/red-hearth.svg" alt="">
-                    </button>
-                    <div class="sell">SELL</div>
                 </div>
             </div>
         </div>

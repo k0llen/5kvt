@@ -51,18 +51,26 @@ if (document.querySelector('.product')) {
     const counterInput = document.querySelector('.product__card-text-block_cost-meter-input');
     const counterPlus = document.querySelector('.product__card-text-block_cost-meter-plus');
     const counterMinus = document.querySelector('.product__card-text-block_cost-meter-minus');
+    let countActual = document.querySelector('.product__card-text-block_cost-actual-num');
+    let countRecent = document.querySelector('.product__card-text-block_cost-recent');
     let inputValue = parseInt(counterInput.value);
-    
+    let countActualNum = parseInt(+/\d+/.exec(countActual.innerHTML));
+    let countRecentNum = parseInt(+/\d+/.exec(countRecent.innerHTML));
 
     counterPlus.addEventListener('click', (e) => {
         if (inputValue < 8) {
             inputValue++;
             counterInput.value = inputValue;
-            counterMinus.classList.remove('product__card-text-block_cost-meter_button-disabled')
-        } else {
+            counterMinus.classList.remove('product__card-text-block_cost-meter_button-disabled');
+            countActual.innerHTML = countActualNum * inputValue;
+            countRecent.innerHTML = countRecentNum * inputValue;
+
+        } else {    
             inputValue = 9;
             counterInput.value = inputValue;
-            counterPlus.classList.add('product__card-text-block_cost-meter_button-disabled')
+            counterPlus.classList.add('product__card-text-block_cost-meter_button-disabled');
+            countActual.innerHTML = countActualNum * inputValue;
+            countRecent.innerHTML = countRecentNum * inputValue;
         }
     });
 
@@ -70,12 +78,15 @@ if (document.querySelector('.product')) {
         if (inputValue > 2) {
             --inputValue;
             counterInput.value = inputValue;
-            counterPlus.classList.remove('product__card-text-block_cost-meter_button-disabled')
+            counterPlus.classList.remove('product__card-text-block_cost-meter_button-disabled');
+            countActual.innerHTML = countActualNum * inputValue;
+            countRecent.innerHTML = countRecentNum * inputValue;
         } else {
             inputValue = 1;
             counterInput.value = inputValue;
-            counterMinus.classList.add('product__card-text-block_cost-meter_button-disabled')
+            counterMinus.classList.add('product__card-text-block_cost-meter_button-disabled');
+            countActual.innerHTML = countActualNum * inputValue;
+            countRecent.innerHTML = countRecentNum * inputValue;
         }
     });
 }
-

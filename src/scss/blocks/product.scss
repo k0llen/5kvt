@@ -198,10 +198,25 @@
                         display: flex;
                         align-items: center;
                         gap: 30px;
+                        width: calc(100% - 120px);
+                    }
+
+                    &-actual-num, &-recent {
+                        display: inline-block;
+                        background: transparent;
+                        width: fit-content;
                     }
 
                     &-actual {
-
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 12px;
+                        
+                        &-num {
+                            color: #383838;
+                        }
                     }
 
                     &-recent {
@@ -352,7 +367,7 @@
         background: #f7f7f7;
         margin-bottom: 30px;            
         font-size: 18px;
-            line-height: 22px;
+        line-height: 22px;
         &-title {
             padding-bottom: 30px;
             margin-bottom: 30px;
