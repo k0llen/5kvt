@@ -7,6 +7,7 @@ if (document.querySelector('.contacts')) {
         pagination: {
             el: '.contacts__adresses-swiper-pagination',
             type: 'bullets',
+            clickable: true,
         },
         speed: 500,
         slidesToScroll: 1,
