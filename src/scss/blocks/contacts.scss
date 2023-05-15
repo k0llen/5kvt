@@ -22,11 +22,11 @@
     }
 
     &__time-desctop {
-        margin-bottom: 30px;
     }
 
     &__map {
         margin-bottom: 50px;
+        padding-top: 30px;
         position: relative;
         iframe {
             width: 100%;
@@ -39,7 +39,7 @@
             color: #9c9c9c;
             background: #FFFFFF;
             position: absolute;
-            top: 20px;
+            top: 50px;
             left: 20px;
             cursor: pointer;
             transition: .3s all;
@@ -60,6 +60,14 @@
         &-wrapper {}
 
         &-slide {
+            text-decoration: none;
+            color: #383838;
+
+            &:hover {
+                color: #1074EB;
+                transition: .3s all;
+            }
+
             &-pic {
                 width: 100%;
                 object-fit: cover;
@@ -267,6 +275,10 @@
         margin-top: 32px;
         margin-bottom: 32px;
 
+        .wrapper {
+            padding: 0 8px;
+        }
+
         &__back-links {
             margin-bottom: 32px;
         }
@@ -283,6 +295,7 @@
 
         &__map {
             margin-bottom: 56px;
+            padding-top: 0;
             &-pickup {
                 margin-bottom: 16px;
                 position: static;
@@ -367,6 +380,16 @@
                 flex-direction: column;
                 gap: 16px;
                 align-items: stretch;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contacts {
+        &__map {
+            iframe {
+                height: 300px;
             }
         }
     }
