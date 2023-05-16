@@ -1,0 +1,295 @@
+.about {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: #9c9c9c;
+    font-size: 18px;
+    line-height: 22px;
+
+    .black {
+        color: #383838;
+    }
+
+    .orange {
+        color: #FF9900;
+    }
+
+    .blue {
+        color: #1074EB;
+    }
+
+    .about__back {
+        &-link {
+            color: #9c9c9c;
+            transition: .3s all;
+            
+            &:hover {
+                color: #383838;
+            }
+
+            &s {
+                display: flex;
+                align-items: center;
+                margin-bottom: 50px;
+            }
+        }
+
+        &-current {
+            color: #383838;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    &__card {
+        padding: 30px;
+        background: #f7f7f7;
+
+        &_delivery {
+            
+            &-title {
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 43px;
+                color: #383838;
+                margin-bottom: 30px;
+            }
+
+            &-subtitle {
+            }
+        
+            &-caution {
+
+            }
+
+        }
+
+        &_payment {
+            &-title {
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 43px;
+                color: #383838;
+                margin-bottom: 30px;
+            }
+        }
+
+        &_troubles {
+        
+        }
+
+        &_trade {
+            margin-top: -435px;
+
+            &-list {
+                ul {
+                    li {
+
+                    }
+                }
+            }
+        }
+
+
+        &-block {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #c9c9c9;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+            &-text-big {
+                font-size: 24px;
+                line-height: 29px;
+                font-weight: 500;
+            }
+        }
+
+        &-link {
+            color: #1074EB;
+            transition: .3s all;
+
+            &:hover {
+                color: #383838;
+            }
+        }
+    }
+
+    &__swiper {
+        &-buttons {
+            display: none;
+
+            &-bottom {
+                display: none;
+            }
+        }
+
+        &-button {
+            &-prev, &-next {
+                padding: 14px;
+                border-radius: 3px;
+                height: 51px;
+                width: 51px;
+                background: #1074EB;
+                transition: .3s all;
+
+                &:hover {
+                    background: #0561ce;
+                }
+
+                &:active {
+                    background: #0653ae;
+                }
+            }
+        }
+
+        &-pagination {
+
+            &-top, &-bottom {
+                width: fit-content !important;
+                transform: none !important;
+                font-size: 24px;
+                line-height: 29px;
+
+                .swiper-pagination-bullet {
+                    width: fit-content;
+                    margin: 0 auto;
+                    padding: 0;
+                    background: transparent;
+                    height: fit-content;
+                    display: none;
+                    transform: scale(1);
+                    left: 0 !important;
+                }
+
+                .swiper-pagination-bullet-active-next {
+                    display: none;
+                    transform: scale(1);
+                    left: 0 !important;
+                }
+
+                .swiper-pagination-bullet-active-prev {
+                    display: none;
+                    transform: scale(1);
+                    left: 0 !important;
+                }
+
+
+                .swiper-pagination-bullet-active-main {
+                    display: block;
+                    transform: scale(1);
+                    left: 0 !important;
+                }
+            }
+
+            &-top {
+
+            }
+
+            &-bottom {
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .about {
+        &__card {
+            &_trade {
+                margin-top: -470px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .about {
+        padding-top: 32px;
+        font-size: 16px;
+        line-height: 19px;
+        padding-bottom: 16px;
+
+        .wrapper {
+            padding: 0 8px;
+        }
+
+        &__back-links {
+            margin-bottom: 32px;
+        }
+
+        &__swiper {
+            &-buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 24px;
+
+                &-bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 16px;
+                }
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            gap: 0;
+        }
+
+        &__card {
+            padding: 16px;
+            box-sizing: border-box !important;
+
+            &_delivery-title {
+                display: none;
+            }
+
+            &_payment-title {
+                display: none;
+            }
+
+            &_trade {
+                margin: 0;
+
+                &-title, &-title + br {
+                    display: none;
+                }
+
+                
+            }
+
+            &-block {
+                padding-top: 16px;
+                padding-bottom: 16px;
+
+
+                &-text-big {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .about__swiper-pagination-bottom, .about__swiper-pagination-top {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
