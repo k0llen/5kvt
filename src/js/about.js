@@ -30,6 +30,7 @@ if (document.querySelector('.about')) {
             slidesPerView: 1,
             slidesToScroll: 1,
             spaceBetween: 10,
+            autoHeight: true,
         });
 
 
