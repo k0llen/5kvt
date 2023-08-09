@@ -25,22 +25,4 @@ if (document.querySelector('.month')) {
         },
     })
 
-    // favorite 
-
-    const addFavorite = document.querySelectorAll('.month__swiper-slide-favorite_blue');
-    const removeFavorite = document.querySelectorAll('.month__swiper-slide-favorite_red');
-    
-    addFavorite.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            this.parentNode.classList.add('month__swiper-slide-favorite--active');
-        });
-    });
-
-    removeFavorite.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            this.parentNode.classList.remove('month__swiper-slide-favorite--active');
-        });
-    });
-
-
 }
