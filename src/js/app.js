@@ -51,8 +51,8 @@ if (document.querySelector('.month')) {
         </div>
         <div class="${shopDB[key].type}__swiper-slide-cost main-cards__swiper-slide-cost fz24 fw500">
             <div class="${shopDB[key].type}__swiper-slide-cost-text main-cards__swiper-slide-cost-text">
-                <p>${shopDB[key].currentPrice} ₽</p>
-                <p class="${shopDB[key].type}__swiper-slide-cost-recent main-cards__swiper-slide-cost-recent">${shopDB[key].oldPrice ? shopDB[key].oldPrice : ''}</p>
+                <p>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
+                <p class="${shopDB[key].type}__swiper-slide-cost-recent main-cards__swiper-slide-cost-recent">${shopDB[key].oldPrice ? Intl.NumberFormat("ru").format(shopDB[key].oldPrice) : ''}</p>
             </div>
             <button class="${shopDB[key].type}__swiper-slide-parametres main-cards__swiper-slide-parametres">
                 <img src="img/svg/blue-parametres.svg" alt="">
@@ -107,8 +107,8 @@ if (document.querySelector('.catalog')) {
             </div>
             <div class="catalog__card-cost fz24 fw500">
                 <div class="catalog__card-cost-text">
-                    <p>${shopDB[key].currentPrice} ₽</p>
-                    <p class="catalog__card-cost-recent">${shopDB[key].oldPrice ? shopDB[key].oldPrice : ''}</p>
+                    <p>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
+                    <p class="catalog__card-cost-recent">${shopDB[key].oldPrice ? Intl.NumberFormat("ru").format(shopDB[key].oldPrice) : ''}</p>
                 </div>
                 <button class="catalog__card-parametres">
                     <img src="./img/svg/blue-parametres.svg" alt="">
@@ -156,8 +156,8 @@ if (document.querySelector('.else')) {
             </div>
             <div class="else__swiper-slide-cost fz24 fw500" >
                 <div class="else__swiper-slide-cost-text">
-                    <p>${shopDB[key].currentPrice} ₽</p>
-                    <p class="else__swiper-slide-cost-recent">${shopDB[key].oldPrice ? shopDB[key].oldPrice : ''}</p>
+                    <p>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
+                    <p class="else__swiper-slide-cost-recent">${shopDB[key].oldPrice ? Intl.NumberFormat("ru").format(shopDB[key].oldPrice) : ''}</p>
                 </div>
                 <button class="else__swiper-slide-parametres">
                     <img src="./img/svg/blue-parametres.svg" alt="">
