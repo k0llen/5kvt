@@ -41,17 +41,17 @@ if (document.querySelector('.month')) {
 
     function drawCatalogItems(db) {
         for (let key in db) {
-            const cardHtml = `<div class="${shopDB[key].type}__swiper-slide swiper-slide main-cards__swiper-slide" data-id="${shopDB[key].id}" data-new="${shopDB[key].new}" data-sale="${shopDB[key].sale}">
+            const cardHtml = `<div class="${shopDB[key].type}__swiper-slide swiper-slide main-cards__swiper-slide"  data-id="${shopDB[key].id}" data-new="${shopDB[key].new}" data-sale="${shopDB[key].sale}" data-card>
         <a href="/product-card.html" class="${shopDB[key].type}__swiper-slide-link main-cards__swiper-slide-link">
-            <img src="${shopDB[key].img}" alt="" class="${shopDB[key].type}__swiper-slide-pic main-cards__swiper-slide-pic">
+            <img src="${shopDB[key].img}" alt="" class="${shopDB[key].type}__swiper-slide-pic main-cards__swiper-slide-pic" data-img>
         </a>
         <div class="${shopDB[key].type}__swiper-slide-desc main-cards__swiper-slide-desc fz18">
-            <a href="./product-card.html" class="fw500 ${shopDB[key].type}__swiper-slide-link-text main-cards__swiper-slide-link-text">${shopDB[key].article}</a>
-            <p class="fw400">${shopDB[key].title}</p>
+            <a href="./product-card.html" class="fw500 ${shopDB[key].type}__swiper-slide-link-text main-cards__swiper-slide-link-text card-article" data-article>${shopDB[key].article}</a>
+            <p class="fw400 card-name" data-name>${shopDB[key].title}</p>
         </div>
         <div class="${shopDB[key].type}__swiper-slide-cost main-cards__swiper-slide-cost fz24 fw500">
             <div class="${shopDB[key].type}__swiper-slide-cost-text main-cards__swiper-slide-cost-text">
-                <p>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
+                <p class="current" data-current>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
                 <p class="${shopDB[key].type}__swiper-slide-cost-recent main-cards__swiper-slide-cost-recent">${shopDB[key].oldPrice ? Intl.NumberFormat("ru").format(shopDB[key].oldPrice) : ''}</p>
             </div>
             <button class="${shopDB[key].type}__swiper-slide-parametres main-cards__swiper-slide-parametres">
@@ -59,7 +59,7 @@ if (document.querySelector('.month')) {
             </button>
         </div>
         <div class="${shopDB[key].type}__swiper-slide-cart-param main-cards__swiper-slide-cart-param">
-            <button class="${shopDB[key].type}__swiper-slide-cart main-cards__swiper-slide-cart fz16">
+            <button class="${shopDB[key].type}__swiper-slide-cart main-cards__swiper-slide-cart fz16" data-add-to-cart>
                 <img src="img/svg/white-shopping-cart.svg" alt="" class="${shopDB[key].type}__swiper-slide-cart-pic main-cards__swiper-slide-cart-pic">
                 <p>В корзину</p>
             </button>
@@ -97,17 +97,17 @@ if (document.querySelector('.catalog')) {
 
     function drawCatalogItems(db) {
         for (let key in db) {
-            const cardHtml = `<div class="catalog__card" data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}">
+            const cardHtml = `<div class="catalog__card" data-card data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}">
             <a href="./product-card.html" class="catalog__card-link">
-                <img src="${shopDB[key].img}" alt="data-id="${shopDB[key].title}"" class="catalog__card-pic">
+                <img src="${shopDB[key].img}" data-img alt="data-id="${shopDB[key].title}"" class="catalog__card-pic">
             </a>
             <div class="catalog__card-desc fz18">
-                <a href="./product-card.html" class="fw500 catalog__card-link-text">${shopDB[key].article}</a>
-                <p class="fw400">${shopDB[key].title}</p>
+                <a href="./product-card.html" class="fw500 catalog__card-link-text card-article" data-article>${shopDB[key].article}</a>
+                <p class="fw400 card-name" data-name>${shopDB[key].title}</p>
             </div>
             <div class="catalog__card-cost fz24 fw500">
                 <div class="catalog__card-cost-text">
-                    <p>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
+                    <p class="catalog__card-current" data-current>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
                     <p class="catalog__card-cost-recent">${shopDB[key].oldPrice ? Intl.NumberFormat("ru").format(shopDB[key].oldPrice) : ''}</p>
                 </div>
                 <button class="catalog__card-parametres">
@@ -115,7 +115,7 @@ if (document.querySelector('.catalog')) {
                 </button>
             </div>
             <div class="catalog__card-cart-param">
-                <button class="catalog__card-cart fz16">
+                <button class="catalog__card-cart fz16" data-add-to-cart>
                     <img src="./img/svg/white-shopping-cart.svg" alt="" class="catalog__card-cart-pic">
                     <p>В корзину</p>
                 </button>
@@ -146,17 +146,17 @@ if (document.querySelector('.else')) {
     const elseWrapper = document.querySelector('.else__swiper-wrapper');
     function drawCatalogItems(db) {
         for (let key in db) {
-            const cardHtml = `<div class="else__swiper-slide swiper-slide" data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}">
+            const cardHtml = `<div class="else__swiper-slide swiper-slide" data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}" data-card>
             <a href="./product-card.html" class="else__swiper-slide-link">
-                <img src="${shopDB[key].img}" alt="data-id="${shopDB[key].title}"" class="else__swiper-slide-pic">
+                <img src="${shopDB[key].img}" data-img alt="data-id="${shopDB[key].title}"" class="else__swiper-slide-pic">
             </a>
             <div class="else__swiper-slide-desc">
-                <a href="#" class="fw500 else__swiper-slide-link-text">${shopDB[key].article}</a>
-                <p class="fw400">${shopDB[key].title}</p>
+                <a href="#" class="fw500 else__swiper-slide-link-text card-article" data-article>${shopDB[key].article}</a>
+                <p class="fw400 card-name" data-name>${shopDB[key].title}</p>
             </div>
             <div class="else__swiper-slide-cost fz24 fw500" >
                 <div class="else__swiper-slide-cost-text">
-                    <p>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
+                    <p class="current" data-current>${Intl.NumberFormat("ru").format(shopDB[key].currentPrice)} ₽</p>
                     <p class="else__swiper-slide-cost-recent">${shopDB[key].oldPrice ? Intl.NumberFormat("ru").format(shopDB[key].oldPrice) : ''}</p>
                 </div>
                 <button class="else__swiper-slide-parametres">
@@ -164,7 +164,7 @@ if (document.querySelector('.else')) {
                 </button>
             </div>
             <div class="else__swiper-slide-cart-param">
-                <button class="else__swiper-slide-cart fz16">
+                <button class="else__swiper-slide-cart fz16" data-add-to-cart>
                     <img src="./img/svg/white-shopping-cart.svg" alt="" class="else__swiper-slide-cart-pic">
                     <p>В корзину</p>
                 </button>
