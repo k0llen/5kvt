@@ -51,11 +51,11 @@ if (document.querySelector('[data-cart]')) {
 
                 const cartItemHtml = `<div class="cart-item" data-id="${cartDB.id}">
                 <div class="left">
-                    <a href="./product-card.html" class="pic-block">
+                    <a href="product-card.html" class="pic-block">
                     <img src="${cartDB.img}" alt="${cartDB.name}">
                     </a>
                     <div class="text">
-                        <a href="./product-card.html">${cartDB.article}</a>
+                        <a href="product-card.html">${cartDB.article}</a>
                         <p>${cartDB.name}</p>
                     </div>
                 </div>
@@ -125,11 +125,11 @@ if (document.querySelector('[data-cart]')) {
 
                 const cartItemHtml = `<div class="cart-item" data-id="${cartDB.id}">
                 <div class="left">
-                    <a href="./product-card.html" class="pic-block">
+                    <a href="product-card.html" class="pic-block">
                     <img src="${cartDB.img}" alt="${cartDB.name}">
                     </a>
                     <div class="text">
-                        <a href="./product-card.html">${cartDB.article}</a>
+                        <a href="product-card.html">${cartDB.article}</a>
                         <p>${cartDB.name}</p>
                     </div>
                 </div>

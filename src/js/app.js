@@ -46,7 +46,7 @@ if (document.querySelector('.month')) {
             <img src="${shopDB[key].img}" alt="" class="${shopDB[key].type}__swiper-slide-pic main-cards__swiper-slide-pic" data-img>
         </a>
         <div class="${shopDB[key].type}__swiper-slide-desc main-cards__swiper-slide-desc fz18">
-            <a href="./product-card.html" class="fw500 ${shopDB[key].type}__swiper-slide-link-text main-cards__swiper-slide-link-text card-article" data-article>${shopDB[key].article}</a>
+            <a href="product-card.html" class="fw500 ${shopDB[key].type}__swiper-slide-link-text main-cards__swiper-slide-link-text card-article" data-article>${shopDB[key].article}</a>
             <p class="fw400 card-name" data-name>${shopDB[key].title}</p>
         </div>
         <div class="${shopDB[key].type}__swiper-slide-cost main-cards__swiper-slide-cost fz24 fw500">
@@ -98,11 +98,11 @@ if (document.querySelector('.catalog')) {
     function drawCatalogItems(db) {
         for (let key in db) {
             const cardHtml = `<div class="catalog__card" data-card data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}">
-            <a href="./product-card.html" class="catalog__card-link">
+            <a href="product-card.html" class="catalog__card-link">
                 <img src="${shopDB[key].img}" data-img alt="data-id="${shopDB[key].title}"" class="catalog__card-pic">
             </a>
             <div class="catalog__card-desc fz18">
-                <a href="./product-card.html" class="fw500 catalog__card-link-text card-article" data-article>${shopDB[key].article}</a>
+                <a href="product-card.html" class="fw500 catalog__card-link-text card-article" data-article>${shopDB[key].article}</a>
                 <p class="fw400 card-name" data-name>${shopDB[key].title}</p>
             </div>
             <div class="catalog__card-cost fz24 fw500">
@@ -147,7 +147,7 @@ if (document.querySelector('.else')) {
     function drawCatalogItems(db) {
         for (let key in db) {
             const cardHtml = `<div class="else__swiper-slide swiper-slide" data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}" data-card>
-            <a href="./product-card.html" class="else__swiper-slide-link">
+            <a href="product-card.html" class="else__swiper-slide-link">
                 <img src="${shopDB[key].img}" data-img alt="data-id="${shopDB[key].title}"" class="else__swiper-slide-pic">
             </a>
             <div class="else__swiper-slide-desc">
