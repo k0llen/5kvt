@@ -1,17 +1,17 @@
 
 function favoriteFunc() {
-    const addFavorite = document.querySelectorAll('.main-cards__swiper-slide-favorite_blue');
-    const removeFavorite = document.querySelectorAll('.main-cards__swiper-slide-favorite_red');
+    const addFavorite = document.querySelectorAll('[data-addfavorite]');
+    const removeFavorite = document.querySelectorAll('[data-removefavorite]');
 
     addFavorite.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            this.parentNode.classList.add('main-cards__swiper-slide-favorite--active');
+            this.parentNode.classList.add('favorite--active');
         });
     });
 
     removeFavorite.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            this.parentNode.classList.remove('main-cards__swiper-slide-favorite--active');
+            this.parentNode.classList.remove('favorite--active');
         });
     });
 }
@@ -41,7 +41,7 @@ if (document.querySelector('.month')) {
 
     function drawCatalogItems(db) {
         for (let key in db) {
-            const cardHtml = `<div class="${shopDB[key].type}__swiper-slide swiper-slide main-cards__swiper-slide"  data-id="${shopDB[key].id}" data-new="${shopDB[key].new}" data-sale="${shopDB[key].sale}" data-card>
+            const cardHtml = `<div class="${shopDB[key].type}__swiper-slide swiper-slide main-cards__swiper-slide"  data-id="${shopDB[key].id}" data-new="${shopDB[key].new}" data-sale="${shopDB[key].sale}" data-card data-category="${shopDB[key].category}" data-subcategory="${shopDB[key].subcategory}" data-brand="${shopDB[key].brand}" data-rate="${shopDB[key].rate}" data-ship="${shopDB[key].ship}" data-pickup="${shopDB[key].pickup}" data-inorder="${shopDB[key].inOrder}" data-stock="${shopDB[key].stock}">
         <a href="/product-card.html" class="${shopDB[key].type}__swiper-slide-link main-cards__swiper-slide-link">
             <img src="${shopDB[key].img}" alt="" class="${shopDB[key].type}__swiper-slide-pic main-cards__swiper-slide-pic" data-img>
         </a>
@@ -67,10 +67,10 @@ if (document.querySelector('.month')) {
                 <img src="img/svg/white-parametres.svg" alt="">
             </button>
         </div>
-        <button class="${shopDB[key].type}__swiper-slide-favorite_blue main-cards__swiper-slide-favorite_blue ${shopDB[key].type}__swiper-slide-favorite main-cards__swiper-slide-favorite">
+        <button class="${shopDB[key].type}__swiper-slide-favorite_blue main-cards__swiper-slide-favorite_blue ${shopDB[key].type}__swiper-slide-favorite main-cards__swiper-slide-favorite" data-addfavorite>
             <img src="img/svg/blue-hearth.svg" alt="">
         </button>
-        <button class="${shopDB[key].type}__swiper-slide-favorite_red main-cards__swiper-slide-favorite_red ${shopDB[key].type}__swiper-slide-favorite main-cards__swiper-slide-favorite">
+        <button class="${shopDB[key].type}__swiper-slide-favorite_red main-cards__swiper-slide-favorite_red ${shopDB[key].type}__swiper-slide-favorite main-cards__swiper-slide-favorite" data-removefavorite>
             <img src="img/svg/red-hearth.svg" alt="">
         </button>
         </div>`;
@@ -97,7 +97,7 @@ if (document.querySelector('.catalog')) {
 
     function drawCatalogItems(db) {
         for (let key in db) {
-            const cardHtml = `<div class="catalog__card" data-card data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}">
+            const cardHtml = `<div class="catalog__card" data-card data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}" data-category="${shopDB[key].category}" data-subcategory="${shopDB[key].subcategory}" data-brand="${shopDB[key].brand}" data-rate="${shopDB[key].rate}" data-ship="${shopDB[key].ship}" data-pickup="${shopDB[key].pickup}" data-inorder="${shopDB[key].inOrder}" data-stock="${shopDB[key].stock}">
             <a href="product-card.html" class="catalog__card-link">
                 <img src="${shopDB[key].img}" data-img alt="data-id="${shopDB[key].title}"" class="catalog__card-pic">
             </a>
@@ -123,10 +123,10 @@ if (document.querySelector('.catalog')) {
                     <img src="./img/svg/white-parametres.svg" alt="">
                 </button>
             </div>
-            <button class="catalog__card-favorite_blue catalog__card-favorite">
+            <button class="catalog__card-favorite_blue catalog__card-favorite" data-addfavorite>
                 <img src="./img/svg/blue-hearth.svg" alt="">
             </button>
-            <button class="catalog__card-favorite_red catalog__card-favorite">
+            <button class="catalog__card-favorite_red catalog__card-favorite" data-removefavorite>
                 <img src="./img/svg/red-hearth.svg" alt="">
             </button>
         </div>
@@ -146,7 +146,7 @@ if (document.querySelector('.else')) {
     const elseWrapper = document.querySelector('.else__swiper-wrapper');
     function drawCatalogItems(db) {
         for (let key in db) {
-            const cardHtml = `<div class="else__swiper-slide swiper-slide" data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}" data-card>
+            const cardHtml = `<div class="else__swiper-slide swiper-slide" data-id="${shopDB[key].id}" data-sale="${shopDB[key].sale}" data-new="${shopDB[key].new}" data-card data-category="${shopDB[key].category}" data-subcategory="${shopDB[key].subcategory}" data-brand="${shopDB[key].brand}" data-rate="${shopDB[key].rate}" data-ship="${shopDB[key].ship}" data-pickup="${shopDB[key].pickup}" data-inorder="${shopDB[key].inOrder}" data-stock="${shopDB[key].stock}">
             <a href="product-card.html" class="else__swiper-slide-link">
                 <img src="${shopDB[key].img}" data-img alt="data-id="${shopDB[key].title}"" class="else__swiper-slide-pic">
             </a>
@@ -172,10 +172,10 @@ if (document.querySelector('.else')) {
                     <img src="./img/svg/white-parametres.svg" alt="">
                 </button>
             </div>
-            <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite">
+            <button class="else__swiper-slide-favorite_blue else__swiper-slide-favorite" data-addfavorite>
                 <img src="./img/svg/blue-hearth.svg" alt="">
             </button>
-            <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite">
+            <button class="else__swiper-slide-favorite_red else__swiper-slide-favorite" data-removefavorite>
                 <img src="./img/svg/red-hearth.svg" alt="">
             </button>
         </div>

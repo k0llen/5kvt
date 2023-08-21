@@ -56,7 +56,6 @@ if (document.querySelector('.catalog')) {
             listItem.addEventListener('click', function (e) {
                 e.stopPropagation();
                 dropDownBtn.innerText = this.innerText;
-                dropDownBtn.focus();
                 dropDownInput.value = this.dataset.value;
                 dropDownList.classList.remove('catalog__side-select-dropdown-list--visible');
                 dropDownBtn.classList.remove('catalog__side-select-dropdown-button--active');
@@ -98,22 +97,4 @@ if (document.querySelector('.catalog')) {
             };
         });
     };
-
-    // catalog favorite 
-
-    const addFavorite = document.querySelectorAll('.catalog__card-favorite_blue');
-    const removeFavorite = document.querySelectorAll('.catalog__card-favorite_red');
-    
-    addFavorite.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            this.parentNode.classList.add('catalog__card-favorite--active');
-        });
-    });
-
-    removeFavorite.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            this.parentNode.classList.remove('catalog__card-favorite--active');
-        });
-    });
-
 }

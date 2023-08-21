@@ -231,7 +231,20 @@
                 &-link {
                     text-decoration: none;
                     transition: .3s all;
-
+                    position: relative;
+                    .cart-current-count {
+                        display: none;
+                        font-size: 14px;
+                        line-height: 100%;
+                        padding: 3px 6px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        background: #1074EB;
+                        color: #fff;
+                        position: absolute;
+                        top: -10px;
+                        right: -10px;
+                    }
                     &:hover {
                         opacity: .7;
                     }
@@ -673,7 +686,20 @@
 
             &-link {
                 transition: .3s all;
-
+                position: relative;
+                .cart-current-count {
+                    display: none;
+                    font-size: 14px;
+                    line-height: 100%;
+                    padding: 3px 6px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background: #1074EB;
+                    color: #fff;
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                }
                 &:hover {
                     opacity: .7;
                 }

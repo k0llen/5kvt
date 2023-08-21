@@ -176,12 +176,12 @@
                     transform: scale(1.1);
                 }
 
-                &--active &_blue {
+                .favorite--active &_blue {
                     z-index: -1;
                     transform: scale(0);
                 }
 
-                &--active &_red {
+                .favorite--active &_red {
                     z-index: 1;
                     transform: scale(1);
                 }

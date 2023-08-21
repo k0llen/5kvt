@@ -12,29 +12,44 @@ if (document.querySelector('[data-cart]')) {
     cartBurger.addEventListener('click', () => {
         cartModal.classList.toggle('active')
     })
-    
+
     document.addEventListener('click', (e) => {
         if (!cartModal.contains(e.target) && !cart.contains(e.target) && !cartBurger.contains(e.target)) {
             cartModal.classList.remove('active');
         }
     })
-    
-    // calculation sum of items in cart
+
+    // calculation sum and count of items in cart
     function sumFun() {
         const sumHtml = document.querySelector('.sum');
         const cartCards = document.querySelectorAll('.cart-item');
+        const counters = document.querySelectorAll('.cart-current-count');
+
         let sum = 0;
+        let count = 0;
+
         for (let i = 0; i < cartCards.length; i++) {
             sum += parseInt(cartCards[i].querySelector('.cost').innerHTML.replace(/[^0-9]/g, '')) * parseInt(cartCards[i].querySelector('.count').innerHTML);
+            count += parseInt(cartCards[i].querySelector('.count').innerHTML);
         }
         sumHtml.innerHTML = `Итого: ${Intl.NumberFormat("ru").format(sum)} ₽`;
+        
+        if (count > 0) {
+            counters.forEach((counter) =>{
+                counter.innerHTML = count;
+                counter.style.display = 'block';
+            })
+        } else {
+            counters.forEach((counter) =>{
+                counter.style.display = 'none';
+            })
+        }
     }
 
     if (!document.querySelector('.product')) {
 
         //cart system
         window.addEventListener('click', (event) => {
-
             if (event.target.hasAttribute('data-add-to-cart') || event.target.closest('[data-add-to-cart]')) {
                 const card = event.target.closest('[data-card]');
                 const cartDB = {
@@ -83,26 +98,31 @@ if (document.querySelector('[data-cart]')) {
                 if (productInCart) {
                     const countElement = productInCart.querySelector('.count');
                     if (parseInt(countElement.innerHTML) + 1 <= 9) {
-                        countElement.innerHTML = parseInt(countElement.innerHTML) + 1;  
+                        countElement.innerHTML = parseInt(countElement.innerHTML) + 1;
                     }
                     sumFun();
+
                 } else {
                     cartList.insertAdjacentHTML('beforeend', cartItemHtml);
                     sumFun();
+
                 }
             } else if (event.target.hasAttribute('data-remove') || event.target.closest('[data-remove]')) {
                 // remove items from cart
                 event.target.closest('.cart-item').remove();
                 sumFun();
+
             }
 
 
 
             if (!cartModal.classList.contains('empty') && document.querySelectorAll('.cart-item').length < 1) {
                 cartModal.classList.add('empty');
+
             } else if (cartModal.classList.contains('empty') && document.querySelectorAll('.cart-item').length >= 1) {
                 cartModal.classList.remove('empty');
                 sumFun();
+
             }
         })
     } else {
@@ -154,30 +174,33 @@ if (document.querySelector('[data-cart]')) {
                 </div>
             </div>`;
                 const productInCart = cartList.querySelector(`[data-id="${cartDB.id}"]`);
-                
+
                 if (productInCart) {
                     const countElement = productInCart.querySelector('.count');
                     if (parseInt(countElement.innerHTML) + parseInt(cartDB.count) <= 9) {
                         countElement.innerHTML = parseInt(countElement.innerHTML) + parseInt(cartDB.count);
                     }
                     sumFun();
+
                 } else {
                     cartList.insertAdjacentHTML('beforeend', cartItemHtml);
                     sumFun();
+
                 }
             } else if (event.target.hasAttribute('data-remove') || event.target.closest('[data-remove]')) {
                 // remove items from cart
                 event.target.closest('.cart-item').remove();
                 sumFun();
+
             }
-
-
 
             if (!cartModal.classList.contains('empty') && document.querySelectorAll('.cart-item').length < 1) {
                 cartModal.classList.add('empty');
+
             } else if (cartModal.classList.contains('empty') && document.querySelectorAll('.cart-item').length >= 1) {
                 cartModal.classList.remove('empty');
                 sumFun();
+
             }
         })
 
