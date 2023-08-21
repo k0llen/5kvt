@@ -99,6 +99,8 @@ if (document.querySelector('[data-cart]')) {
                     const countElement = productInCart.querySelector('.count');
                     if (parseInt(countElement.innerHTML) + 1 <= 9) {
                         countElement.innerHTML = parseInt(countElement.innerHTML) + 1;
+                    } else {
+                        countElement.innerHTML = 9;
                     }
                     sumFun();
 
@@ -179,6 +181,8 @@ if (document.querySelector('[data-cart]')) {
                     const countElement = productInCart.querySelector('.count');
                     if (parseInt(countElement.innerHTML) + parseInt(cartDB.count) <= 9) {
                         countElement.innerHTML = parseInt(countElement.innerHTML) + parseInt(cartDB.count);
+                    } else {
+                        countElement.innerHTML = 9;
                     }
                     sumFun();
 
