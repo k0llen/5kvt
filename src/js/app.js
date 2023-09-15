@@ -42,7 +42,7 @@ if (document.querySelector('.month')) {
     function drawCatalogItems(db) {
         for (let key in db) {
             const cardHtml = `<div class="${shopDB[key].type}__swiper-slide swiper-slide main-cards__swiper-slide"  data-id="${shopDB[key].id}" data-new="${shopDB[key].new}" data-sale="${shopDB[key].sale}" data-card data-category="${shopDB[key].category}" data-subcategory="${shopDB[key].subcategory}" data-brand="${shopDB[key].brand}" data-rate="${shopDB[key].rate}" data-ship="${shopDB[key].ship}" data-pickup="${shopDB[key].pickup}" data-inorder="${shopDB[key].inOrder}" data-stock="${shopDB[key].stock}">
-        <a href="/product-card.html" class="${shopDB[key].type}__swiper-slide-link main-cards__swiper-slide-link">
+        <a href="product-card.html" class="${shopDB[key].type}__swiper-slide-link main-cards__swiper-slide-link">
             <img src="${shopDB[key].img}" alt="" class="${shopDB[key].type}__swiper-slide-pic main-cards__swiper-slide-pic" data-img>
         </a>
         <div class="${shopDB[key].type}__swiper-slide-desc main-cards__swiper-slide-desc fz18">
@@ -151,7 +151,7 @@ if (document.querySelector('.else')) {
                 <img src="${shopDB[key].img}" data-img alt="data-id="${shopDB[key].title}"" class="else__swiper-slide-pic">
             </a>
             <div class="else__swiper-slide-desc">
-                <a href="#" class="fw500 else__swiper-slide-link-text card-article" data-article>${shopDB[key].article}</a>
+                <a href="product-card.html" class="fw500 else__swiper-slide-link-text card-article" data-article>${shopDB[key].article}</a>
                 <p class="fw400 card-name" data-name>${shopDB[key].title}</p>
             </div>
             <div class="else__swiper-slide-cost fz24 fw500" >

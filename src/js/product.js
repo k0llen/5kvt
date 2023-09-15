@@ -53,21 +53,21 @@ if (document.querySelector('.product')) {
     const counterMinus = document.querySelector('.product__card-text-block_cost-meter-minus');
     let countActual = document.querySelector('.product__card-text-block_cost-actual-num');
     let countRecent = document.querySelector('.product__card-text-block_cost-recent');
-    let inputValue = parseInt(counterInput.value);
+    let inputValue = parseInt(counterInput.innerText);
     let countActualNum = parseInt(countActual.innerHTML.replace(/[^0-9]/g, ''));
     let countRecentNum = parseInt(countRecent.innerHTML.replace(/[^0-9]/g, ''));
 
     counterPlus.addEventListener('click', (e) => {
         if (inputValue < 8) {
             inputValue++;
-            counterInput.value = inputValue;
+            counterInput.innerText = inputValue;
             counterMinus.classList.remove('product__card-text-block_cost-meter_button-disabled');
             countActual.innerHTML = Intl.NumberFormat("ru").format(countActualNum * inputValue);
             countRecent.innerHTML = Intl.NumberFormat("ru").format(countRecentNum * inputValue);
 
         } else {    
             inputValue = 9;
-            counterInput.value = inputValue;
+            counterInput.innerText = inputValue;
             counterPlus.classList.add('product__card-text-block_cost-meter_button-disabled');
             countActual.innerHTML = Intl.NumberFormat("ru").format(countActualNum * inputValue);
             countRecent.innerHTML = Intl.NumberFormat("ru").format(countRecentNum * inputValue);
@@ -77,13 +77,13 @@ if (document.querySelector('.product')) {
     counterMinus.addEventListener('click', (e) => {
         if (inputValue > 2) {
             --inputValue;
-            counterInput.value = inputValue;
+            counterInput.innerText = inputValue;
             counterPlus.classList.remove('product__card-text-block_cost-meter_button-disabled');
             countActual.innerHTML = Intl.NumberFormat("ru").format(countActualNum * inputValue);
             countRecent.innerHTML = Intl.NumberFormat("ru").format(countRecentNum * inputValue);
         } else {
             inputValue = 1;
-            counterInput.value = inputValue;
+            counterInput.innerText = inputValue;
             counterMinus.classList.add('product__card-text-block_cost-meter_button-disabled');
             countActual.innerHTML = Intl.NumberFormat("ru").format(countActualNum * inputValue);
             countRecent.innerHTML = Intl.NumberFormat("ru").format(countRecentNum * inputValue);

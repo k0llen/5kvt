@@ -46,6 +46,13 @@ if (document.querySelector('[data-cart]')) {
         }
     }
 
+    let data = {};
+    if (localStorage.getItem('cart')) {
+        data = JSON.parse(localStorage.getItem('cart'));
+    }
+
+
+
     if (!document.querySelector('.product')) {
 
         //cart system
@@ -93,7 +100,14 @@ if (document.querySelector('[data-cart]')) {
                         </svg>
                     </button>
                 </div>
-            </div>`;
+                </div>`;
+
+                function addToLocalStorage() {
+                    localStorage.setItem('cart', JSON.stringify(cartDB));
+                }
+
+                const localStorageDB = JSON.parse(localStorage.getItem('cart'));
+
                 const productInCart = cartList.querySelector(`[data-id="${cartDB.id}"]`);
                 if (productInCart) {
                     const countElement = productInCart.querySelector('.count');
@@ -107,13 +121,12 @@ if (document.querySelector('[data-cart]')) {
                 } else {
                     cartList.insertAdjacentHTML('beforeend', cartItemHtml);
                     sumFun();
-
+                    addToLocalStorage()
                 }
             } else if (event.target.hasAttribute('data-remove') || event.target.closest('[data-remove]')) {
                 // remove items from cart
                 event.target.closest('.cart-item').remove();
                 sumFun();
-
             }
 
 
@@ -139,7 +152,7 @@ if (document.querySelector('[data-cart]')) {
                     name: card.querySelector('[data-name]').innerText,
                     article: card.querySelector('[data-article]').innerText,
                     currentPrice: card.querySelector('[data-current]').getAttribute('data-current'),
-                    count: +card.querySelector('[data-counter]').value,
+                    count: +card.querySelector('[data-counter]').innerText,
                 };
 
                 const cartList = document.querySelector('.cart-list');
@@ -174,7 +187,13 @@ if (document.querySelector('[data-cart]')) {
                         </svg>
                     </button>
                 </div>
-            </div>`;
+                </div>`;
+
+                function addToLocalStorage() {
+                    localStorage.setItem('cart', JSON.stringify(cartDB));
+                }
+
+                const localStorageDB = JSON.parse(localStorage.getItem('cart'));
                 const productInCart = cartList.querySelector(`[data-id="${cartDB.id}"]`);
 
                 if (productInCart) {
@@ -185,26 +204,25 @@ if (document.querySelector('[data-cart]')) {
                         countElement.innerHTML = 9;
                     }
                     sumFun();
-
+                    localStorageDB.count = +productInCart.querySelector('.count').innerHTML;
+                    localStorage.setItem('cart', JSON.stringify(localStorageDB));
+                    console.log(JSON.parse(localStorage.getItem('cart')).count);
                 } else {
                     cartList.insertAdjacentHTML('beforeend', cartItemHtml);
                     sumFun();
-
+                    addToLocalStorage();
                 }
             } else if (event.target.hasAttribute('data-remove') || event.target.closest('[data-remove]')) {
                 // remove items from cart
                 event.target.closest('.cart-item').remove();
                 sumFun();
-
             }
 
             if (!cartModal.classList.contains('empty') && document.querySelectorAll('.cart-item').length < 1) {
                 cartModal.classList.add('empty');
-
             } else if (cartModal.classList.contains('empty') && document.querySelectorAll('.cart-item').length >= 1) {
                 cartModal.classList.remove('empty');
                 sumFun();
-
             }
         })
 
