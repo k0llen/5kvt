@@ -1,4 +1,5 @@
-
+if (document.querySelector('#map')) {
+	
 
 ymaps.ready(init);
 
@@ -68,5 +69,6 @@ function init() {
     map.controls.remove('rulerControl');
 
 	map.geoObjects.add(placemark).add(placemark2).add(placemark3).add(placemark4).add(placemark5);
+}
 }
 
