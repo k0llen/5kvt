@@ -1,4 +1,5 @@
 if (document.querySelector('.contacts')) {
+    const head = document.querySelector('head');
     const contactsAdressesSwiper = new Swiper('.contacts__adresses-swiper', {
         navigation: {
             nextEl: '.contacts__adresses-swiper-button-next',

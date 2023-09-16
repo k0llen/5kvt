@@ -8,9 +8,9 @@
     <meta name="format-detection" content="address=no">
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b871b373-64c6-4b67-b033-39162958513e&lang=ru_RU" type="text/javascript"></script>
   </head>
   <body class="body">
-
     
 <header class="header">
     <div class="header__top">
@@ -7316,10 +7316,7 @@
         </div>
         <div class="contacts__map" id="contacts-map">
             <div class="contacts__map-pickup fz18" id="contacts__pickup-popup-trigger">Адреса для самовывоза</div>
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac7e97ccdbc00356337d222d21f46b21300e9860e4acc7643afdc37c96decc755&amp;source=constructor"
-                frameborder="0">
-            </iframe>
+            <div id="map"></div>
         </div>
         <div class="contacts__adresses-swiper swiper">
             <div class="contacts__adresses-swiper-wrapper swiper-wrapper">

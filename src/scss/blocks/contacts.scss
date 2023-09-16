@@ -28,7 +28,7 @@
         margin-bottom: 50px;
         padding-top: 30px;
         position: relative;
-        iframe {
+        #map {
             width: 100%;
             height: 500px;
         }
@@ -39,6 +39,7 @@
             color: #9c9c9c;
             background: #FFFFFF;
             position: absolute;
+            z-index: 1;
             top: 50px;
             left: 20px;
             cursor: pointer;
@@ -47,6 +48,19 @@
             &:hover {
                 color: #383838;
             }
+        }
+
+        [class*="copyrights-pane"] {
+            display: none !important;
+        }
+        
+        [class*="ground-pane"] {
+            filter: grayscale(1);
+        }
+
+        .balloon-content{
+            color: #9C9C9C;
+            font-size: 16px;
         }
     }
 
@@ -302,7 +316,7 @@
                 padding: 0;
                 background: transparent;
             }
-            iframe {
+            #map {
                 height: 400px;
             }
         }
@@ -388,7 +402,7 @@
 @media screen and (max-width: 550px) {
     .contacts {
         &__map {
-            iframe {
+            #map {
                 height: 300px;
             }
         }
